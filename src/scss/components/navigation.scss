@@ -15,6 +15,17 @@
       text-decoration: none;
       color: var(--color-white);
       text-transform: lowercase;
+
+      &:hover,
+      &:focus {
+        color: var(--color-accent);
+        @include transition(color);
+      }
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
     }
   }
 
