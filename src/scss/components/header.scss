@@ -142,6 +142,7 @@
 
     @include media-tablet {
       padding-top: 15px;
+      padding-bottom: 0;
 
       & > * {
         max-width: calc(50% - 10px);
@@ -294,6 +295,7 @@
 
 .header__cta {
   margin-bottom: 10px;
+  text-align: center;
 
   @include media-desktop {
     margin-bottom: 15px;
