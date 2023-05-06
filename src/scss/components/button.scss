@@ -2,9 +2,26 @@
   padding: 15px 20px;
   color: var(--color-white);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   background-color: var(--color-accent);
   text-decoration: none;
   border: 0;
   border-radius: 10px;
+
+  display: inline-block;
+
+  &--hide-to-desktop {
+    display: none;
+  }
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    padding: 20px 35px;
+    &--hide-to-desktop {
+      display: inline;
+    }
+  }
 }

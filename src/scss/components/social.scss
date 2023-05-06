@@ -14,6 +14,17 @@
     background-color: var(--color-black);
     border-radius: 50%;
   }
+
+  @include media-tablet {
+    gap: 10px;
+  }
+
+  @include media-desktop {
+    a {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 .social__icon {

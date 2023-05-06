@@ -1,4 +1,10 @@
 .container {
-  margin-right: var(--container-gap);
-  margin-left: var(--container-gap);
+  padding-right: var(--container-gap);
+  padding-left: var(--container-gap);
+
+  @include media-desktop {
+    max-width: calc(var(--width-desktop) - (var(--container-gap) * 2));
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -12,15 +12,13 @@
 /* Mixins, helpers and functions */
 @import 'base/mixins';
 
-/* Vendor */
-
-/* Components */
-
-/* Browser specific styles */
 @import 'dirty/hacks';
 @import 'components/body';
 @import 'components/button';
+@import 'components/headline';
+
 @import 'components/container';
 @import "components/header";
 @import "components/social";
 @import "components/hamburger";
+@import "components/navigation";
