@@ -1,0 +1,148 @@
+.case {
+  padding-bottom: 40px;
+}
+
+.case__headline {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+
+  &--large {
+    font-size: 40px;
+  }
+
+  @include media-tablet {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-bottom: 40px;
+    &--shift {
+      align-self: end;
+    }
+
+    &--large {
+      font-size: 64px;
+      text-transform: lowercase;
+    }
+  }
+
+  @include media-laptop {
+    &--shift {
+      align-self: center;
+    }
+  }
+
+  @include media-desktop {
+    margin-bottom: 50px;
+    font-size: 36px;
+
+    &--large {
+      font-size: 80px;
+      text-transform: lowercase;
+    }
+  }
+}
+
+.case__list {
+  @include reset-list;
+  display: grid;
+  gap: 25px;
+  margin-bottom: 40px;
+
+  li {
+    width: 100%;
+  }
+
+  @include media-mobile-l {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-tablet {
+    gap: 30px;
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
+  }
+}
+
+.case__item {
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: rgba(108, 108, 108, 0.8);
+
+  @include media-tablet {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media-desktop {
+    &:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @include media-desktop {
+    padding: 35px 30px;
+  }
+}
+
+.case__preview {
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 15px;
+
+  @include adaptive-image(270px, 333px);
+
+  @include media-tablet {
+    margin-bottom: 25px;
+    @include adaptive-image(318px, 348px);
+  }
+}
+
+.case__info {
+  margin-bottom: 5px; /*padding задан у td*/
+  font-weight: 500;
+  width: 100%;
+
+  td {
+    padding-bottom: 10px;
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  @include media-tablet {
+    tr:first-child {
+      font-size: 18px;
+    }
+  }
+
+  @include media-desktop {
+    margin-bottom: 10px;
+  }
+}
+
+.case__link {
+  width: 100%;
+  text-align: center;
+  @include media-tablet {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+.case__more {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  display: block;
+
+
+}

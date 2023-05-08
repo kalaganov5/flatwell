@@ -17,6 +17,16 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .hidden {
   display: none;
 }
+
+img {
+  max-width: 100%;
+}
+
+

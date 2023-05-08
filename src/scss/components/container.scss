@@ -3,7 +3,7 @@
   padding-left: var(--container-gap);
 
   @include media-desktop {
-    max-width: calc(var(--width-desktop) - (var(--container-gap) * 2));
+    max-width: var(--width-desktop);
     margin-left: auto;
     margin-right: auto;
   }

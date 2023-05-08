@@ -55,8 +55,7 @@
   "engines": {
     "node": ">=14"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "license": "",
   "private": false,
   "repository": {
@@ -76,6 +75,7 @@
   "target": "web",
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "swiper": "^9.2.4"
   }
 }
