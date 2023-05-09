@@ -1,0 +1,8 @@
+.br {
+
+  @include media-tablet {
+    &--to-tablet {
+      display: none;
+    }
+  }
+}

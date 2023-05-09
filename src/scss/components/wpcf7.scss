@@ -1,0 +1,49 @@
+.wpcf7 {
+  p {
+    margin: 0;
+  }
+}
+
+.wpcf7__label {
+  display: block;
+}
+
+.wpcf7__label {
+  font-weight: 600;
+}
+
+.wpcf7-form-control {
+  max-width: 100%;
+  border: none;
+}
+
+.wpcf7-tel {
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 15px 20px;
+  margin-top: 25px;
+  width: 100%;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  @include media-tablet {
+    margin-top: 15px;
+  }
+}
+
+.wpcf7__rules {
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 10px;
+
+  @include media-tablet {
+    font-size: 14px;
+  }
+}
+
+.wpcf7-submit {
+  margin-top: 30px;
+  width: 100%;
+}

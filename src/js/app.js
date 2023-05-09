@@ -6,6 +6,7 @@ import 'normalize.css';
 import loadPixelperfect from 'pixelperfect-tool';
 import '../scss/app.scss';
 import { animation } from './animation/animation';
+import { phoneValidation } from './phone-validation/phone-validation';
 
 window.pixelperfect = {
   breakpoints: [320, 768, 1400],
@@ -16,3 +17,4 @@ loadPixelperfect();
 // DEV
 
 animation();
+phoneValidation();

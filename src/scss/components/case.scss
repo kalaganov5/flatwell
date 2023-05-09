@@ -144,5 +144,7 @@
   max-width: 300px;
   display: block;
 
-
+  @include media-desktop {
+    max-width: 400px;
+  }
 }
