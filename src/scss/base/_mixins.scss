@@ -124,3 +124,13 @@
     left: 0;
   }
 }
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* Устаревший метод для скрытия элемента */
+  clip: rect(1px, 1px, 1px, 1px); /* Метод для скрытия элемента */
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden;
+  white-space: nowrap; /* Предотвращает перенос текста */
+}
