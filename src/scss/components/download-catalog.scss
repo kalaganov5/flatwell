@@ -1,3 +1,9 @@
+.download-catalog {
+  @include media-desktop {
+    padding-bottom: 100px;
+  }
+}
+
 .download-catalog__form {
   max-width: 400px;
   margin-left: auto;
