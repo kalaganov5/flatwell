@@ -1,0 +1,117 @@
+.benefit {
+  padding-top: 70px;
+  padding-bottom: 45px;
+
+  @include media-tablet {
+    padding-top: 90px;
+    padding-bottom: 75px;
+  }
+}
+
+.benefit__headline {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  span {
+    font-size: 24px;
+    display: block;
+  }
+
+  @include media-tablet {
+    font-size: 64px;
+
+    span {
+      font-size: 28px;
+    }
+  }
+
+  @include media-desktop {
+    font-size: 80px;
+
+    span {
+      font-size: 36px;
+    }
+  }
+}
+
+.benefit__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background-color: var(--color-accent);
+    }
+  }
+
+  h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: flex-start;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      flex-basis: calc(50% - 15px);
+
+      &:nth-child(3n) {
+        flex-basis: 100%;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+
+      padding-left: 25px;
+
+      &:after {
+        width: 10px;
+      }
+    }
+  }
+
+  @include media-desktop {
+    margin-left: 120px;
+    margin-right: 120px;
+    justify-content: center;
+    $width: calc((100% / 3) - 20px);
+
+    row-gap: 65px;
+
+    li {
+      padding-left: 35px;
+      flex-basis: $width;
+
+      &:nth-child(3n) {
+        flex-basis: $width;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &:after {
+        width: 14px;
+      }
+    }
+  }
+}
