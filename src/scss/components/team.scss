@@ -24,8 +24,6 @@
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 50px;
-  margin-left: 80px;
-  margin-right: 80px;
 
   li {
     display: flex;
@@ -36,7 +34,11 @@
 
   @include media-tablet {
     grid-template-columns: repeat(3, 1fr);
-    gap: 75px;
+  }
+
+  @include media-desktop {
+    margin-left: 80px;
+    margin-right: 80px;
   }
 }
 
