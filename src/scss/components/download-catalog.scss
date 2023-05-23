@@ -1,0 +1,35 @@
+.download-catalog {
+  @include media-desktop {
+    padding-bottom: 100px;
+  }
+}
+
+.download-catalog__form {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-tablet {
+    max-width: 580px;
+  }
+}
+
+.download-catalog__headline {
+  font-size: 24px;
+
+  @include media-tablet {
+    font-size: 32px;
+  }
+
+  @include media-desktop {
+    font-size: 40px;
+  }
+}
+
+.download-catalog__text {
+  font-size: 16px;
+
+  @include media-desktop {
+    font-size: 20px;
+  }
+}

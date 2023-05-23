@@ -1,0 +1,196 @@
+.wpcf7 {
+  p {
+    margin: 0;
+  }
+}
+
+.wpcf7__label {
+  display: block;
+}
+
+.wpcf7__label {
+  font-weight: 600;
+}
+
+.wpcf7-form-control {
+  max-width: 100%;
+  border: none;
+  font-size: 16px;
+}
+
+.wpcf7-tel {
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 15px 20px;
+  margin-top: 25px;
+  width: 100%;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  @include media-tablet {
+    margin-top: 15px;
+  }
+
+  @include media-desktop {
+    padding: 20px;
+  }
+}
+
+.wpcf7__rules {
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 10px;
+
+  @include media-tablet {
+    font-size: 14px;
+    grid-column: 1/3;
+  }
+}
+
+.wpcf7-submit {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.wpcf7__soc {
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    & > p:nth-child(4) {
+      grid-row: 2/3;
+      grid-column: 2;
+    }
+
+    .wpcf7-submit {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .wpcf7-form-control {
+      margin-top: 0;
+    }
+  }
+}
+
+.wpcf7__soc-select-messenger {
+  display: grid;
+  row-gap: 15px;
+  $size: 40px;
+  margin-top: -20px;
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+
+  .wpcf7-radio {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  input {
+    &[value="WhatsApp"],
+    &[value="Telegram"] {
+      position: relative;
+      @include visually-hidden;
+
+      & {
+        &:hover,
+        &:focus {
+          ~ .wpcf7-list-item-label {
+            &:before {
+              box-shadow: 0 0 10px 3px #C14261;
+            }
+          }
+        }
+
+        &:checked {
+          ~ .wpcf7-list-item-label {
+            &:before {
+              box-shadow: 0 0 10px 3px #C14261;
+            }
+          }
+        }
+
+        & ~ .wpcf7-list-item-label {
+          position: relative;
+          font-size: 0;
+          display: inline-flex;
+          height: $size;
+          width: $size;
+          margin-top: -20px;
+
+          &:before {
+            content: '';
+            width: $size;
+            height: $size;
+            position: absolute;
+            background-color: #48C95F;
+            cursor: pointer;
+            background-image: url("../images/design/icon-whatsapp.svg");
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center;
+            border-radius: 50%;
+            @include transition(box-shadow);
+
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+
+    &[value="Telegram"] {
+      & ~ .wpcf7-list-item-label {
+        &:before {
+          background-color: #27A6E5;
+          background-image: url("../images/design/icon-tg.svg");
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    margin-top: 0;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+
+    grid-column: 1/3;
+  }
+
+  @include media-desktop {
+    margin-bottom: 10px;
+  }
+}
+
+.wpcf7__download {
+  br {
+    display: none;
+  }
+}
+
+.wpcf7__soc-title {
+  order: 1;
+
+  @include media-tablet {
+    order: unset;
+    margin-top: 18px;
+  }
+}
+
+.wpcf7__soc-messenger {
+  @include media-tablet {
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
+}

@@ -2,9 +2,47 @@
   padding: 15px 20px;
   color: var(--color-white);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   background-color: var(--color-accent);
   text-decoration: none;
   border: 0;
   border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+
+  display: inline-block;
+
+  &--hide-to-desktop {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent-dark);
+    @include transition(background-color);
+  }
+
+  &--light {
+    background-color: var(--color-white);
+    color: var(--color-accent);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      @include transition(background-color);
+    }
+  }
+
+  @include media-tablet {
+    font-size: 16px;
+  }
+
+  @include media-desktop {
+    padding: 20px 35px;
+    &--hide-to-desktop {
+      display: inline;
+    }
+  }
 }

@@ -13,6 +13,23 @@
     height: 26px;
     background-color: var(--color-black);
     border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-accent);
+      @include transition(background-color);
+    }
+  }
+
+  @include media-tablet {
+    gap: 10px;
+  }
+
+  @include media-desktop {
+    a {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 

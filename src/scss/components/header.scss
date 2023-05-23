@@ -1,7 +1,17 @@
+.header {
+  @include media-tablet {
+    position: relative;
+  }
+}
+
 .header__main {
   background-color: var(--color-gray);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include media-tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .header__text {
@@ -12,11 +22,36 @@
   color: var(--color-white);
 
   margin-bottom: 5px;
+
+  @include media-tablet {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  @include media-desktop {
+    font-size: 16px;
+  }
 }
 
 .header__link {
   color: var(--color-white);
   text-decoration: none;
+
+  &:hover:not(.button),
+  &:focus:not(.button) {
+    color: var(--color-accent);
+    @include transition(color);
+  }
+}
+
+.header__phone {
+  @include media-tablet {
+    font-size: 14px;
+  }
+
+  @include media-desktop {
+    font-size: 20px;
+  }
 }
 
 .header__callback {
@@ -25,15 +60,16 @@
     display: block;
     justify-self: end;
   }
+  @include media-desktop {
+    margin-left: calc(130px - 40px); // 40px gap grid
+  }
 }
 
 .header__contact {
   display: none;
   @include media-tablet {
-    & {
-      display: block;
-      font-size: 14px;
-    }
+    display: block;
+    font-size: 14px;
   }
 }
 
@@ -46,6 +82,12 @@
   width: 108px;
   height: auto;
   max-height: 100px;
+  @include media-tablet {
+    width: 180px;
+  }
+  @include media-desktop {
+    width: 290px;
+  }
 }
 
 .header__container {
@@ -73,5 +115,263 @@
   }
 }
 
+.header__accent {
+  position: relative;
 
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/design/bg-interior.jpg");
+    background-position: center;
+    background-color: rgba(53, 54, 58, 0.7);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    filter: blur(2px);
+  }
+
+  & > div {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include media-tablet {
+      padding-top: 15px;
+      padding-bottom: 0;
+
+      & > * {
+        max-width: calc(50% - 10px);
+      }
+    }
+  }
+
+  @include media-tablet {
+    position: unset;
+
+    &:before {
+      z-index: -1;
+      width: 50%;
+      filter: none;
+      left: 50%;
+    }
+  }
+
+  @include media-desktop {
+    &:before {
+      background-size: cover;
+      background-position: center left;
+      width: 50%;
+      background-image: url("../images/design/bg-interior-pc.jpg");
+      max-width: 700px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 50%;
+      bottom: 0;
+      background-image: url("../images/design/bg-wave.svg");
+      background-position: center right;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+
+      z-index: -2;
+    }
+  }
+}
+
+.header .header__navigation {
+  max-width: unset;
+}
+
+.header__professionalization {
+  color: #D1D1D1;
+  width: calc(100% - 110px);
+  @include media-tablet {
+    font-size: 20px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+  }
+}
+
+.header__headline {
+  font-size: 32px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: calc(100% - 125px);
+  text-transform: uppercase;
+
+  @include media-tablet {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  @include media-desktop {
+    font-size: 56px;
+  }
+}
+
+.header__subheading {
+  color: var(--color-white);
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 40px;
+
+  @include media-tablet {
+    margin-bottom: 70px;
+  }
+
+  @include media-desktop {
+    font-size: 24px;
+    margin-bottom: 150px;
+  }
+}
+
+.header__benefit {
+  color: rgba(255, 255, 255, 0.7);
+  @include reset-list;
+  font-size: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+
+  max-width: 400px;
+
+  li {
+    $width: 8px;
+    padding-left: $width;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: calc($width / 2);
+      background-color: var(--color-accent);
+    }
+
+    &:nth-child(even) {
+      grid-column: 2;
+    }
+  }
+
+  @include media-tablet {
+    font-size: 14px;
+    margin-bottom: 60px;
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(2, 1fr);
+    width: 40%;
+    font-size: 16px;
+
+    li {
+      padding-left: 12px;
+    }
+  }
+}
+
+.header__cta {
+  margin-bottom: 10px;
+  text-align: center;
+
+  @include media-desktop {
+    margin-bottom: 15px;
+  }
+}
+
+.header__cta-limit {
+  font-weight: 400;
+  font-size: 10px;
+  color: #D1D1D1;
+
+  @include media-desktop {
+    font-size: 14px;
+  }
+}
+
+.header__offer {
+  @include reset-list;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+
+  $levels: 5;
+  $width-base: 142px;
+  $step: 12px;
+
+  li {
+    width: $width-base;
+    @for $i from 1 through $levels {
+      &:nth-child(#{$i}) {
+        width: $width-base - ($step * $i);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border-radius: 10px 0 0 10px;
+    padding: 5px 5px 5px 10px;
+    display: block;
+    font-size: 10px;
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      background-color: var(--color-accent);
+      transition-property: background-color, color;
+      transition-duration: 200ms;
+      transition-timing-function: linear;
+    }
+  }
+
+  @include media-tablet {
+    top: 60px;
+    $width-base: 200px;
+    li {
+      @for $i from 1 through $levels {
+        &:nth-child(#{$i}) {
+          width: $width-base;
+        }
+      }
+    }
+
+    a {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+
+  @include media-desktop {
+    top: 95px;
+  }
+}

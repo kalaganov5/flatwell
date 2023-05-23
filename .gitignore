@@ -24,3 +24,4 @@ node_modules/
 
 # Output
 dist/
+package-lock.json

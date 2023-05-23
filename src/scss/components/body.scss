@@ -1,5 +1,8 @@
 .body {
   background-color: var(--color-background);
   @include font-base;
+  line-height: 1.2;
+  font-size: 16px;
+  color: var(--color-white);
   min-width: 320px;
 }

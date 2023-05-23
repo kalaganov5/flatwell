@@ -1,0 +1,36 @@
+.navigation__list {
+  @include reset-list;
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 75px;
+
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--color-white);
+      text-transform: lowercase;
+
+      &:hover,
+      &:focus {
+        color: var(--color-accent);
+        @include transition(color);
+      }
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+    }
+  }
+
+  @include media-desktop {
+    gap: 20px;
+    margin-bottom: 85px;
+  }
+}

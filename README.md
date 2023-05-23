@@ -141,17 +141,3 @@ $ npm run lint:js
 $ npm run stats
 ```
 
-> This will open the visualisaion on the default configuraiton URL `localhost:8888`, you can change this URL or port
-> following the [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-cli)
-> documentation.
-
-## Continuous Integration
-
-This boilerplate template contains integration with [Travis CI](https://travis-ci.org/). The build system runs all
-linting scripts and deploys production optimized pages to _GitHub_ pages upon push to the `master` branch. However, note
-that this deployment flow only works for _Project Pages_, as User and Organization
-pages [only support the master branch flow](https://help.github.com/articles/user-organization-and-project-pages/).
-
-For more information on how to set up alternative deployment processes, check out
-the [Travis CI documentation on deployment](https://docs.travis-ci.com/user/deployment). The service can deploy to
-dozens of cloud providers, including Heroku, AWS, and Firebase.
