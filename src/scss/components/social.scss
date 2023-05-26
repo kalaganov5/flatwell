@@ -21,6 +21,31 @@
     }
   }
 
+  &--colored {
+    .social__link {
+      &--vk {
+        background-color: #0077FF;
+      }
+
+      &--wa {
+        background-color: #48C95F;
+      }
+
+      &--tg {
+        background-color: #27A6E5;
+      }
+    }
+  }
+
+  &--size-m {
+    gap: 15px;
+
+    a {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   @include media-tablet {
     gap: 10px;
   }
@@ -30,10 +55,19 @@
       width: 30px;
       height: 30px;
     }
+
+    &--size-m {
+      gap: 15px;
+
+      a {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
 
 .social__icon {
   width: 50%;
-  height: 50%;
+  height: auto;
 }
