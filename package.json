@@ -40,7 +40,7 @@
     "mini-css-extract-plugin": "^2.4.4",
     "pixelperfect-tool": "^1.4.0",
     "postcss": "^8.4.23",
-    "postcss-loader": "^7.0.0",
+    "postcss-loader": "^7.3.2",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.50.1",
     "sass-lint": "^1.13.1",
