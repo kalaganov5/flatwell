@@ -1,6 +1,58 @@
+.navigation {
+
+  &--open {
+
+    @keyframes opacitySlow {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #35363A;
+    height: auto;
+    width: 100%;
+    z-index: 10;
+
+    animation-name: opacitySlow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+
+    .navigation__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+      padding: 30px 20px;
+    }
+  }
+}
+
 .navigation__list {
   @include reset-list;
   display: none;
+
+  a {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-white);
+    text-transform: lowercase;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+      @include transition(color);
+    }
+  }
 
   @include media-tablet {
     display: flex;
@@ -15,17 +67,13 @@
       text-decoration: none;
       color: var(--color-white);
       text-transform: lowercase;
+      position: relative;
 
       &:hover,
       &:focus {
         color: var(--color-accent);
         @include transition(color);
       }
-    }
-
-    a {
-      position: relative;
-      text-decoration: none;
     }
   }
 

@@ -3,7 +3,13 @@
   "env": {
     "node": true,
     "jasmine": true,
-    "jquery": true
+    "jquery": true,
+    "es2021": true
+    // Добавьте это свойство для указания поддержки ES2021
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021
+    // Укажите версию ECMAScript, которую хотите использовать (ES2021 в данном случае)
   },
   "rules": {
     "no-use-before-define": 0,

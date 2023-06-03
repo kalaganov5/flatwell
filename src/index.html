@@ -88,9 +88,9 @@
                 </button>
             </div>
             <div class="header__callback">
-                <a class="button button--accent header__link callback-button" href="#">
+                <button class="button button--accent header__link callback-button modal-free-consult" type="button">
                     Заказать звонок
-                </a>
+                </button>
             </div>
         </div>
     </div>
@@ -124,9 +124,9 @@
                     согласованием работ
                 </li>
             </ul>
-            <a class="header__cta button" href="#">
+            <button class="header__cta button modal-free-consult" type="button">
                 Получить <span class="button--hide-to-desktop">бесплатную</span> консультацию дизайнера
-            </a>
+            </button>
             <div class="header__cta-limit">
                 *Осталось 4&nbsp;места на&nbsp;дизайн-проект в&nbsp;этом месяце. Оставьте заявку и&nbsp;забронируйте
                 место
@@ -767,9 +767,9 @@
                     </div>
                 </li>
             </ul>
-            <a class="extras__giftbutton button giftservice__button" href="#">
+            <button class="extras__giftbutton button giftservice__button modal-free-consult" type="button">
                 Узнать подробности
-            </a>
+            </button>
         </div>
     </section>
     <section class="benefit">
@@ -930,7 +930,7 @@
             </h2>
             <div class="faq__accordion accordion">
                 <div class="accordion-item">
-                    <button aria-expanded="false" id="accordion-button-1">
+                    <button aria-expanded="false" id="accordion-button-1" type="button">
                         <span class="accordion-title">Как долго займет разработка дизайн-проекта?</span>
                         <span aria-hidden="true" class="icon"></span>
                     </button>
@@ -945,7 +945,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button aria-expanded="true" id="accordion-button-2">
+                    <button aria-expanded="true" id="accordion-button-2" type="button">
                         <span class="accordion-title">Может ли быть такое, что дизайн-проект не понравиться?</span>
                         <span aria-hidden="true" class="icon"></span>
                     </button>
@@ -960,7 +960,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button aria-expanded="false" id="accordion-button-3">
+                    <button aria-expanded="false" id="accordion-button-3" type="button">
                         <span class="accordion-title">Будут ли дополнительные затраты на мебель и декор?</span>
                         <span aria-hidden="true" class="icon"></span>
                     </button>
@@ -1095,5 +1095,67 @@
         </div>
     </div>
 </footer>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="free-consult">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">
+                    Связаться с&nbsp;дизайнером <span class="hide-to-tablet">для бесплатной консультации</span>
+                </h2>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <div class="wpcf7 js" dir="ltr" id="wpcf7-f45-p46-o1" lang="en-US">
+                    <form action="#" aria-label="Contact form" class="wpcf7-form init"
+                          data-status="init" method="post" novalidate="novalidate">
+                        <div class="form__item">
+                            <label>
+                                <span class="visually-hidden">Ваше имя</span> <span class="wpcf7-form-control-wrap"
+                                                                                    data-name="name-cf7"><input
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input" name="name-cf7" placeholder="Имя" size="40" type="text"
+                                    value=""></span>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <label>
+                                <span class="visually-hidden">Ваш телефон</span> <span class="wpcf7-form-control-wrap"
+                                                                                       data-name="tel-cf7"><input
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel wpcf7-not-valid form__input phone-validation" name="tel-cf7" placeholder="+7 (000) 000 0000" size="40"
+                                    type="tel" value="">
+                            <span aria-hidden="true" class="wpcf7-not-valid-tip">Please fill out this field.</span>
+                            </span>
+                            </label>
+                        </div>
+                        <div class="form__item wpcf7__rules">
+                            Оставляя заявку, вы принимаете условия обработки персональных данных
+                        </div>
+
+                        <div class="form__item"><input class="wpcf7-form-control has-spinner wpcf7-submit button"
+                                                       type="submit" value="Жду звонок"><span
+                                class="wpcf7-spinner"></span></div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-message">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <main class="modal__content modal__content--message" id="modal-2-content">
+                <div>Принято!</div>
+                <div>Мы скоро с вами свяжемся</div>
+            </main>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

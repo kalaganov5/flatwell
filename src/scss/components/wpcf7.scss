@@ -19,22 +19,10 @@
 }
 
 .wpcf7-tel {
-  border-radius: 10px;
-  font-weight: 400;
-  padding: 15px 20px;
   margin-top: 25px;
-  width: 100%;
-
-  &::placeholder {
-    color: #999999;
-  }
 
   @include media-tablet {
     margin-top: 15px;
-  }
-
-  @include media-desktop {
-    padding: 20px;
   }
 }
 
@@ -193,4 +181,16 @@
 
 .wpcf7-spinner {
   display: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: var(--color-white);
+}
+
+.wpcf7-not-valid {
+  &::placeholder {
+    color: var(--color-accent);
+  }
 }

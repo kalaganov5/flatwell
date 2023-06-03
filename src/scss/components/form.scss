@@ -1,0 +1,14 @@
+.form__input {
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 15px 20px;
+  width: 100%;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  @include media-desktop {
+    padding: 20px;
+  }
+}
