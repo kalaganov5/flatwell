@@ -8,8 +8,8 @@
     // Добавьте это свойство для указания поддержки ES2021
   },
   "parserOptions": {
-    "ecmaVersion": 2021
-    // Укажите версию ECMAScript, которую хотите использовать (ES2021 в данном случае)
+    "ecmaVersion": 2021,
+    "parser": "babel-eslint"
   },
   "rules": {
     "no-use-before-define": 0,

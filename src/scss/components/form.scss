@@ -12,3 +12,23 @@
     padding: 20px;
   }
 }
+
+.form__item {
+  @include media-tablet {
+    &--submit {
+      grid-column: 1/-1;
+    }
+  }
+
+  @include media-desktop {
+    grid-column: 1/-1;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+
+    &--submit {
+      margin-top: 15px;
+    }
+  }
+}

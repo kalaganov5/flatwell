@@ -23,6 +23,17 @@ $padding-h: 20px;
   overflow-y: auto;
   box-sizing: border-box;
   position: relative;
+
+  &--calculate {
+    max-width: 728px;
+    width: 100%;
+  }
+
+  @include media-desktop {
+    &--calculate {
+      max-width: 1320px;
+    }
+  }
 }
 
 .modal__header {
@@ -92,6 +103,14 @@ $padding-h: 20px;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+  }
+
+  @include media-desktop {
+    &--calculate-form {
+      display: grid;
+      grid-template-columns: 1fr 370px;
+      column-gap: 90px;
+    }
   }
 }
 

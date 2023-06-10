@@ -6,6 +6,8 @@ import 'normalize.css';
 // import loadPixelperfect from 'pixelperfect-tool';
 import '../scss/app.scss';
 import { animation } from './animation/animation';
+import FormCalculate from './form/calculate-range';
+import CalculateModal from './modal/calculate-modal';
 import FreeConsultModal from './modal/free-consult-modal';
 import NoticeModal from './modal/notice-modal';
 import { Navigation } from './navigation/navigation';
@@ -42,5 +44,9 @@ new Navigation().init();
 
 new FreeConsultModal().init();
 
+new CalculateModal().init();
+
 const global = window || global;
 global.Notice = new NoticeModal();
+
+new FormCalculate().init();
