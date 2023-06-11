@@ -19,12 +19,11 @@ export default class ProjectInfoModal {
     buttons.forEach((button) => {
       button.addEventListener('click', function (evt) {
         evt.preventDefault();
-        modalManager.openModal(modalID);
+        modalManager.openModal(modalID, {
+          disableFocus: true,
+          disableScroll: true,
+        });
       });
-    });
-    modalManager.openModal(modalID, {
-      disableFocus: true,
-      disableScroll: true,
     });
 
     this.#slider = new Swiper('.project__slider', {

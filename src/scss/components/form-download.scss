@@ -1,0 +1,9 @@
+.form-download__header {
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-download__title {
+  grid-column: 1/-1;
+}

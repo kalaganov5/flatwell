@@ -356,9 +356,9 @@
                         <a class="button offer__button" href="#">
                             Заказать
                         </a>
-                        <a class="button button--light offer__button" href="#">
+                        <button class="button button--light offer__button download-modal" type="button">
                             Скачать пример
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <li>
@@ -413,9 +413,9 @@
                         <a class="button offer__button" href="#">
                             Заказать
                         </a>
-                        <a class="button button--light offer__button" href="#">
+                        <button class="button button--light offer__button download-modal" type="button">
                             Скачать пример
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <li>
@@ -473,9 +473,9 @@
                         <a class="button offer__button" href="#">
                             Заказать
                         </a>
-                        <a class="button button--light offer__button" href="#">
+                        <button class="button button--light offer__button download-modal" type="button">
                             Скачать пример
-                        </a>
+                        </button>
                     </div>
                 </li>
                 <li>
@@ -537,9 +537,9 @@
                         <a class="button offer__button" href="#">
                             Заказать
                         </a>
-                        <a class="button button--light offer__button" href="#">
+                        <button class="button button--light offer__button download-modal" type="button">
                             Скачать пример
-                        </a>
+                        </button>
                     </div>
                 </li>
             </ul>
@@ -1389,6 +1389,77 @@
                     <button class="button project__button modal-calculate-form">
                         Рассчитайте стоимость
                     </button>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide form-download" id="download-project">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header form-download__header">
+                <h2 class="modal__title form-download__title" id="modal-5-title">
+                    Скачайте реальный пример проекта
+                    для ознакомления
+                </h2>
+                <div class="form-download__desc">
+                    Заполните форму, чтобы получить доступ
+                    к&nbsp;файлу с&nbsp;реальным примером
+                </div>
+            </header>
+            <main class="modal__content" id="modal-5-content">
+                <div class="download-catalog__form">
+                    <div class="wpcf7 js">
+                        <form action="#" class="wpcf7-form init" method="post">
+                            <div class="wpcf7__download">
+                                <div class="wpcf7__soc">
+                                    <div class="wpcf7__soc-select-messenger">
+                                        <div class="wpcf7__soc-title">
+                                            <p>Куда отправить каталог?
+                                            </p>
+                                        </div>
+                                        <div class="wpcf7__soc-messenger">
+                                            <p><span class="wpcf7-form-control-wrap" data-name="select-messager"><span
+                                                    class="wpcf7-form-control wpcf7-radio"><span
+                                                    class="wpcf7-list-item first"><label><input name="select-messager"
+                                                                                                type="radio"
+                                                                                                value="Telegram"><span
+                                                    class="wpcf7-list-item-label">Telegram</span></label></span><span
+                                                    class="wpcf7-list-item last"><label><input checked="checked"
+                                                                                               name="select-messager"
+                                                                                               type="radio"
+                                                                                               value="WhatsApp"><span
+                                                    class="wpcf7-list-item-label">WhatsApp</span></label></span></span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p><label><br>
+                                        <span class="visually-hidden">Ваш телефон</span> <span
+                                                class="wpcf7-form-control-wrap" data-name="tel-cf7"><input
+                                                aria-invalid="false"
+                                                aria-required="true"
+                                                class="wpcf7-form-control phone-validation wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input"
+                                                name="tel-cf7"
+                                                placeholder="+7 (000) 000 0000"
+                                                size="40"
+                                                type="tel"
+                                                value=""></span><br>
+                                    </label>
+                                    </p>
+                                    <div class="wpcf7__rules">
+                                        <p>Оставляя заявку, вы принимаете условия обработки персональных данных
+                                        </p>
+                                    </div>
+                                    <p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                              value="Скачать"><span class="wpcf7-spinner"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
                 </div>
             </main>
         </div>

@@ -22,11 +22,11 @@ export default class FormCalculate {
     this.#priceField = document.querySelector('.calculate-form__value span');
 
     noUiSlider.create(this.#slider, {
-      start: [100],
+      start: [50],
       connect: true,
       range: {
-        min: 3,
-        max: 500,
+        min: 1,
+        max: 150,
       },
       tooltips: [
         wNumb({
@@ -42,7 +42,7 @@ export default class FormCalculate {
         mode: 'values',
         density: 10,
         stepped: true,
-        values: [1, 500],
+        values: [1, 150],
         cssPrefix: 'calculate-form-',
         format: {
           to: function (value) {

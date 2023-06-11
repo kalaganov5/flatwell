@@ -8,6 +8,7 @@ import '../scss/app.scss';
 import { animation } from './animation/animation';
 import FormCalculate from './form/calculate-range';
 import CalculateModal from './modal/calculate-modal';
+import DownloadModal from './modal/download-modal';
 import FreeConsultModal from './modal/free-consult-modal';
 import NoticeModal from './modal/notice-modal';
 import ProjectInfoModal from './modal/project-info-modal';
@@ -53,3 +54,5 @@ global.Notice = new NoticeModal();
 new FormCalculate().init();
 
 new ProjectInfoModal().init();
+
+new DownloadModal().init();
