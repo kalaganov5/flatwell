@@ -3,12 +3,14 @@ import MicroModal from 'micromodal';
 class ModalManager {
   #currentOpenModalID = null;
 
-  openModal(modalID) {
+  openModal(modalID, config = {
+    disableScroll: true,
+  }) {
     if (this.#currentOpenModalID) {
       MicroModal.close(this.#currentOpenModalID);
     }
 
-    MicroModal.show(modalID);
+    MicroModal.show(modalID, config);
     this.#currentOpenModalID = modalID;
   }
 

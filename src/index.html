@@ -198,7 +198,7 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
@@ -215,7 +215,7 @@
                             <td>2-х комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
@@ -232,7 +232,7 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
@@ -249,7 +249,7 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
                 </li>
             </ul>
             <a class="case__more button button--light" href="#">Еще работы студии</a>
@@ -1316,5 +1316,83 @@
     </div>
 </div>
 
+<div aria-hidden="true" class="modal micromodal-slide project" id="modal-project">
+    <div class="modal__overlay" tabindex="-1">
+        <div aria-modal="true" class="modal__container modal__container--project" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <main class="modal__content modal__content--project project__content" id="modal-4-content">
+                <div class="swiper project__slider">
+                    <div class="swiper-wrapper">
+                        <div class="project__slide swiper-slide">
+                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
+                        </div>
+                        <div class="project__slide swiper-slide">
+                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
+                        </div>
+                        <div class="project__slide swiper-slide">
+                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
+                        </div>
+                    </div>
+                    <div class="project__nav-button project__button--next swiper-button-next"></div>
+                    <div class="project__nav-button project__button--prev swiper-button-prev"></div>
+                    <div class="project__pagination swiper-pagination"></div>
+                </div>
+                <div class="project__info">
+                    <ul class="project__parameter">
+                        <li>
+                            <div class="project__definition">
+                                Площадь:
+                            </div>
+                            <div class="project__area">
+                                <span>47</span>&nbsp;м&sup2;
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project__definition">
+                                Сроки разработки:
+                            </div>
+                            <div class="project__date">
+                                <span>30</span> дней
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project__definition">
+                                Стоимость проекта:
+                            </div>
+                            <div class="project__cost">
+                                <span>79&nbsp;990</span>&nbsp;₽
+                            </div>
+                        </li>
+                    </ul>
+                    <p>Дизайн-проект заказывал молодой человек, который работает в&nbsp;IT&nbsp;&mdash; сфере.</p>
+                    <p>Было важно учесть разделение зон для работы и&nbsp;отдыха и&nbsp;по&nbsp;максимуму сделать
+                        пространство функциональным: все компактно и&nbsp;удобно. Клиент согласовывал ход работ
+                        онлайн.</p>
+                    <p>Какие услуги студии были предоставлены:</p>
+                    <ul class="project__service">
+                        <li>
+                            разработка дизайн-проекта
+                        </li>
+                        <li>
+                            подбор материалов
+                        </li>
+                        <li>
+                            заказ мебели по разработанным эскизам
+                        </li>
+                        <li>
+                            ремонтные работы
+                        </li>
+                        <li>
+                            контроль выполнения ремонтных работ
+                        </li>
+                    </ul>
+                    <button class="button project__button modal-calculate-form">
+                        Рассчитайте стоимость
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
 </body>
 </html>

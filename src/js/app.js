@@ -10,6 +10,7 @@ import FormCalculate from './form/calculate-range';
 import CalculateModal from './modal/calculate-modal';
 import FreeConsultModal from './modal/free-consult-modal';
 import NoticeModal from './modal/notice-modal';
+import ProjectInfoModal from './modal/project-info-modal';
 import { Navigation } from './navigation/navigation';
 import { phoneValidation } from './phone-validation/phone-validation';
 
@@ -50,3 +51,5 @@ const global = window || global;
 global.Notice = new NoticeModal();
 
 new FormCalculate().init();
+
+new ProjectInfoModal().init();

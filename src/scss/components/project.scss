@@ -1,0 +1,116 @@
+.project {
+  .project__slider {
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  .swiper-pagination-bullet {
+    @include transition(background-color);
+  }
+
+  .project__nav-button {
+    display: none;
+  }
+
+  @include media-desktop {
+    .project__slider {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+
+    .project__nav-button {
+      display: block;
+    }
+  }
+}
+
+.project__content {
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    gap: 100px;
+  }
+}
+
+.project__slider {
+  @include media-desktop {
+    width: 100%;
+  }
+}
+
+.project__slide {
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 0 123.3333333333% 0;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-tablet {
+    padding-bottom: calc(728 / 1063 * 100%);
+  }
+
+  @include media-desktop {
+    padding-bottom: calc(440 / 615 * 100%);
+  }
+}
+
+.project__parameter {
+  @include reset-list;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em;
+
+    div:nth-child(2) {
+      justify-self: end;
+    }
+  }
+
+  @include media-desktop {
+    max-width: 80%;
+  }
+}
+
+.project__info {
+  @include media-desktop {
+    max-width: 90%;
+  }
+}
+
+.project__service {
+  @include media-desktop {
+    padding-left: 1rem;
+  }
+}
+
+.project__definition {
+  font-weight: 600;
+}
+
+.project__button {
+  width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.project__pagination {
+  @include media-desktop {
+    display: none;
+  }
+}
