@@ -7,53 +7,41 @@ import { formatValue, modalManager } from '../utils/utils';
 export default class ProjectInfoModal {
   #buttonsClassName = 'modal-project-info';
   #modalID = 'modal-project';
-
   #projectID = null;
-  #slider = null;
-
   #homeUrl = 'http://localhost:8000/';
 
-  #isError = false;
-
-  constructor(projectId) {
-
-  }
-
   init() {
-    // вызов swiper
-
     const buttons = document.querySelectorAll(`.${this.#buttonsClassName}`);
     const modalID = this.#modalID;
     buttons.forEach((button) => {
       button.addEventListener('click', (evt) => {
         evt.preventDefault();
         this.#projectID = button.getAttribute('data-id');
-        this.#getData(this.#projectID);
-
-        if (!this.#isError) {
-          modalManager.openModal(modalID, {
-            disableFocus: true,
-            disableScroll: true,
-            onClose: this.#closeModal,
+        this.getData(this.#projectID)
+          .then(() => {
+            modalManager.openModal(modalID, {
+              disableFocus: true,
+              disableScroll: true,
+              onClose: this.#closeModal,
+            });
+            this.#swiper();
+          })
+          .catch(error => {
+            alert('Что пошло не так. Ошибка ' + error);
           });
-          this.#swiper();
-          // this.#slider.init();
-        }
       });
     });
   }
 
   #closeModal() {
-    console.log('close modsl');
-    // this.#slider.destroy();
+    // tmp
   }
 
   #swiper() {
-    this.#slider = new Swiper('.project__slider', {
+    return new Swiper('.project__slider', {
       // configure Swiper to use modules
       init: true,
       observer: true,
-      observeParents: true,
       modules: [Navigation, Pagination],
       navigation: {
         nextEl: '.project__button--next',
@@ -112,36 +100,48 @@ export default class ProjectInfoModal {
     }
   }
 
-  async #getData(postId) {
-    try {
-      const postContentResponse = await fetch(this.#homeUrl + `wp-json/wp/v2/cases/${postId}`);
-      // if (!postContentResponse.ok) {
-      //   throw new Error('Ошибка получения содержимого поста');
-      // }
-      const postContentData = await postContentResponse.json();
-      this.#updateData({ contentValue: postContentData.content.rendered });
+  getData(postId) {
+    const postContentPromise = fetch(this.#homeUrl + `wp-json/wp/v2/cases/${postId}`)
+      .then(postContentResponse => {
+        if (!postContentResponse.ok) {
+          throw new Error('Ошибка при получении данных поста');
+        }
+        return postContentResponse.json();
+      })
 
-      const postMetaResponse = await fetch(this.#homeUrl + `wp-json/custom/v1/meta/${postId}`);
-      // if (!postMetaResponse.ok) {
-      //   throw new Error('Ошибка получения метаданных поста');
-      // }
-      const postMetaData = await postMetaResponse.json();
-
-      const {
-        area,
-        cost,
-        duration,
-        gallery
-      } = postMetaData;
-      this.#updateData({
-        areaValue: area,
-        priceValue: cost,
-        durationValue: duration,
-        images: gallery,
+      .catch(error => {
+        // Обработка ошибки
+        throw error;
       });
-    } catch (error) {
-      this.#isError = true;
-      alert('К сожалению, возникли технические неполадки, которые повлияли на нормальную работу данной страницы. Пожалуйста, выполните обновление страницы, чтобы попытаться решить проблему. В случае сохранения проблемы, мы рекомендуем связаться с нашей службой поддержки, чтобы получить необходимую помощь. Мы приносим извинения за доставленные неудобства и приложим все усилия, чтобы как можно скорее восстановить нормальное функционирование.\n\nС уважением,\nКоманда поддержки.');
-    }
+
+    const postMetaPromise = fetch(this.#homeUrl + `wp-json/custom/v1/meta/${postId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Ошибка при получении метаданных поста');
+        }
+        return response.json();
+      })
+      .catch(error => {
+        // Обработка ошибки получения метаданных поста
+        throw error; // Переброс ошибки для обработки во внешнем коде
+      });
+
+    return Promise.all([postContentPromise, postMetaPromise])
+      .then(([postContentData, postMetaData]) => {
+
+        const {
+          area,
+          cost,
+          duration,
+          gallery
+        } = postMetaData;
+        this.#updateData({
+          areaValue: area,
+          priceValue: cost,
+          durationValue: duration,
+          contentValue: postContentData.content.rendered,
+          images: gallery,
+        });
+      });
   }
 }
