@@ -8,7 +8,7 @@ export default class ProjectInfoModal {
   #buttonsClassName = 'modal-project-info';
   #modalID = 'modal-project';
   #projectID = null;
-  #homeUrl = 'http://localhost:8000/';
+  #homeUrl = window.wpJSON;
 
   init() {
     const buttons = document.querySelectorAll(`.${this.#buttonsClassName}`);
@@ -101,7 +101,7 @@ export default class ProjectInfoModal {
   }
 
   getData(postId) {
-    const postContentPromise = fetch(this.#homeUrl + `wp-json/wp/v2/cases/${postId}`)
+    const postContentPromise = fetch(this.#homeUrl + `wp/v2/cases/${postId}`)
       .then(postContentResponse => {
         if (!postContentResponse.ok) {
           throw new Error('Ошибка при получении данных поста');
@@ -114,7 +114,7 @@ export default class ProjectInfoModal {
         throw error;
       });
 
-    const postMetaPromise = fetch(this.#homeUrl + `wp-json/custom/v1/meta/${postId}`)
+    const postMetaPromise = fetch(this.#homeUrl + `custom/v1/meta/${postId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Ошибка при получении метаданных поста');
