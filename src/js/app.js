@@ -10,6 +10,7 @@ import FormCalculate from './form/calculate-range';
 import CalculateModal from './modal/calculate-modal';
 import DownloadModal from './modal/download-modal';
 import FreeConsultModal from './modal/free-consult-modal';
+import OfferModal from './modal/get-offer';
 import NoticeModal from './modal/notice-modal';
 import ProjectInfoModal from './modal/project-info-modal';
 import { Navigation } from './navigation/navigation';
@@ -56,3 +57,4 @@ new FormCalculate().init();
 new ProjectInfoModal().init();
 
 new DownloadModal().init();
+new OfferModal().init();

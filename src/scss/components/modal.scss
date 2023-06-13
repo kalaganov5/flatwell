@@ -34,6 +34,11 @@ $padding-h: 20px;
     width: 100%;
   }
 
+  &--gift-offer {
+    max-width: 728px;
+    width: 100%;
+  }
+
   @include media-tablet {
     &--project {
       padding: 60px;

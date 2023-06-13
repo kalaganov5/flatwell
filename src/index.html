@@ -185,7 +185,7 @@
             <ul class="case__list">
                 <li class="case__item">
                     <div class="case__preview">
-                        <a href="#">
+                        <a class="modal-project-info" data-id="36" href="#">
                             <img alt="" height="333" src="images/content/case-1.jpg" width="270">
                         </a>
                     </div>
@@ -198,11 +198,11 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" data-id="36" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
-                        <a href="#">
+                        <a class="modal-project-info" data-id="37" href="#">
                             <img alt="" height="333" src="images/content/case-2.jpg" width="270">
                         </a>
                     </div>
@@ -215,11 +215,11 @@
                             <td>2-х комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" data-id="37" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
-                        <a href="#">
+                        <a class="modal-project-info" data-id="37" href="#">
                             <img alt="" height="333" src="images/content/case-3.jpg" width="270">
                         </a>
                     </div>
@@ -232,11 +232,11 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" data-id="37" href="#">Подробнее</a>
                 </li>
                 <li class="case__item">
                     <div class="case__preview">
-                        <a href="#">
+                        <a class="modal-project-info" data-id="37" href="#">
                             <img alt="" height="333" src="images/content/case-3.jpg" width="270">
                         </a>
                     </div>
@@ -249,7 +249,7 @@
                             <td>1 комнатная</td>
                         </tr>
                     </table>
-                    <a class="case__link button modal-project-info" href="#">Подробнее</a>
+                    <a class="case__link button modal-project-info" data-id="37" href="#">Подробнее</a>
                 </li>
             </ul>
             <a class="case__more button button--light" href="#">Еще работы студии</a>
@@ -1323,15 +1323,6 @@
             <main class="modal__content modal__content--project project__content" id="modal-4-content">
                 <div class="swiper project__slider">
                     <div class="swiper-wrapper">
-                        <div class="project__slide swiper-slide">
-                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
-                        </div>
-                        <div class="project__slide swiper-slide">
-                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
-                        </div>
-                        <div class="project__slide swiper-slide">
-                            <img alt="" height="333" src="images/content/case-3.jpg" width="270">
-                        </div>
                     </div>
                     <div class="project__nav-button project__button--next swiper-button-next"></div>
                     <div class="project__nav-button project__button--prev swiper-button-prev"></div>
@@ -1344,7 +1335,7 @@
                                 Площадь:
                             </div>
                             <div class="project__area">
-                                <span>47</span>&nbsp;м&sup2;
+                                <span></span>&nbsp;м&sup2;
                             </div>
                         </li>
                         <li>
@@ -1352,7 +1343,6 @@
                                 Сроки разработки:
                             </div>
                             <div class="project__date">
-                                <span>30</span> дней
                             </div>
                         </li>
                         <li>
@@ -1360,32 +1350,12 @@
                                 Стоимость проекта:
                             </div>
                             <div class="project__cost">
-                                <span>79&nbsp;990</span>&nbsp;₽
+                                <span></span>&nbsp;₽
                             </div>
                         </li>
                     </ul>
-                    <p>Дизайн-проект заказывал молодой человек, который работает в&nbsp;IT&nbsp;&mdash; сфере.</p>
-                    <p>Было важно учесть разделение зон для работы и&nbsp;отдыха и&nbsp;по&nbsp;максимуму сделать
-                        пространство функциональным: все компактно и&nbsp;удобно. Клиент согласовывал ход работ
-                        онлайн.</p>
-                    <p>Какие услуги студии были предоставлены:</p>
-                    <ul class="project__service">
-                        <li>
-                            разработка дизайн-проекта
-                        </li>
-                        <li>
-                            подбор материалов
-                        </li>
-                        <li>
-                            заказ мебели по разработанным эскизам
-                        </li>
-                        <li>
-                            ремонтные работы
-                        </li>
-                        <li>
-                            контроль выполнения ремонтных работ
-                        </li>
-                    </ul>
+                    <div class="project__data">
+                    </div>
                     <button class="button project__button modal-calculate-form">
                         Рассчитайте стоимость
                     </button>
@@ -1462,6 +1432,107 @@
                     </div>
                 </div>
             </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide form-download" id="get-offer">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-6-title" aria-modal="true" class="modal__container  modal__container--gift-offer"
+             role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header form-download__header">
+                <h2 class="modal__title form-download__title" id="modal-6-title">
+                    Нет времени ждать разработку дизайн-проекта?
+                </h2>
+                <div class="form-download__desc">
+                    Дизайнеры FlatWell создали 5&nbsp;дизайн-проектов в&nbsp;разных стилях и&nbsp;рассчитали все
+                    варианты работ и&nbsp;смету
+                </div>
+                <ul class="form-download__style">
+                    <li>
+                        лофт
+                    </li>
+                    <li>
+                        сканди
+                    </li>
+                    <li>
+                        классика
+                    </li>
+                    <li>
+                        этно
+                    </li>
+                    <li>
+                        урбан
+                    </li>
+                </ul>
+            </header>
+            <main class="modal__content" id="modal-6-content">
+                <div class="download-catalog__form">
+                    <div class="wpcf7 js">
+                        <form action="#" class="wpcf7-form init" method="post">
+                            <div class="wpcf7__download">
+                                <div class="wpcf7__soc">
+                                    <div class="wpcf7__soc-select-messenger">
+                                        <div class="wpcf7__soc-title">
+                                            <p>Куда отправить каталог?
+                                            </p>
+                                        </div>
+                                        <div class="wpcf7__soc-messenger">
+                                            <p><span class="wpcf7-form-control-wrap" data-name="select-messager"><span
+                                                    class="wpcf7-form-control wpcf7-radio"><span
+                                                    class="wpcf7-list-item first"><label><input name="select-messager"
+                                                                                                type="radio"
+                                                                                                value="Telegram"><span
+                                                    class="wpcf7-list-item-label">Telegram</span></label></span><span
+                                                    class="wpcf7-list-item last"><label><input checked="checked"
+                                                                                               name="select-messager"
+                                                                                               type="radio"
+                                                                                               value="WhatsApp"><span
+                                                    class="wpcf7-list-item-label">WhatsApp</span></label></span></span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p><label><br>
+                                        <span class="visually-hidden">Ваш телефон</span> <span
+                                                class="wpcf7-form-control-wrap" data-name="tel-cf7"><input
+                                                aria-invalid="false"
+                                                aria-required="true"
+                                                class="wpcf7-form-control phone-validation wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input"
+                                                name="tel-cf7"
+                                                placeholder="+7 (000) 000 0000"
+                                                size="40"
+                                                type="tel"
+                                                value=""></span><br>
+                                    </label>
+                                    </p>
+                                    <div class="wpcf7__rules">
+                                        <p>Оставляя заявку, вы принимаете условия обработки персональных данных
+                                        </p>
+                                    </div>
+                                    <p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                              value="Скачать"><span class="wpcf7-spinner"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="form-download__gift">
+                    <svg fill="none" height="57" viewBox="0 0 57 57" width="57" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.7527 38.657C53.2301 38.3791 52.6556 38.2126 52.0655 38.168C51.4753 38.1234 50.8824 38.2017 50.324 38.3979V21.8852H50.8595C52.1636 21.8852 53.2258 20.8229 53.2258 19.5188V15.5634C53.2258 14.2593 52.1636 13.197 50.8595 13.197H42.3008C44.2526 11.5561 45.2545 10.1484 45.3063 8.92201C45.384 7.25519 43.6222 5.35519 43.0781 4.81974C42.534 4.27565 40.6599 2.5311 38.9758 2.59155C38.2763 2.6261 36.169 2.72974 31.8595 9.55246C31.7472 9.54383 31.6436 9.51792 31.5226 9.51792C31.4104 9.51792 31.2981 9.54383 31.1858 9.55246C26.8936 2.73837 24.7863 2.6261 24.0867 2.59155C22.4113 2.49655 20.5199 4.27565 19.9845 4.81974C19.4404 5.36383 17.6872 7.25519 17.7563 8.92201C17.8081 10.1397 18.8186 11.5561 20.7617 13.197H12.2117C10.9076 13.197 9.84538 14.2593 9.84538 15.5634V19.5188C9.84538 20.8229 10.9076 21.8852 12.2117 21.8852H12.7472V32.9052C11.5122 33.2334 10.2081 33.7602 8.84356 34.5202V33.0606C8.84356 32.5796 8.65248 32.1183 8.31236 31.7782C7.97223 31.4381 7.51093 31.247 7.02992 31.247H2.78947C2.30846 31.247 1.84715 31.4381 1.50703 31.7782C1.16691 32.1183 0.97583 32.5796 0.97583 33.0606V51.2316C0.97583 52.2334 1.78765 53.0452 2.78947 53.0452H7.03856C7.51956 53.0452 7.98087 52.8541 8.32099 52.514C8.66111 52.1739 8.85219 51.7126 8.85219 51.2316V50.3506C10.234 50.3334 13.7404 50.532 18.784 52.5097C22.014 53.7706 25.3736 54.4097 28.7158 54.4097C30.5726 54.4097 32.4295 54.2111 34.2517 53.8138C39.2781 52.7256 46.7745 50.4888 53.9945 46.0756C54.4734 45.7772 54.8886 45.3871 55.2161 44.9276C55.5437 44.4681 55.7771 43.9484 55.9031 43.3984C56.3522 41.5243 55.4713 39.5811 53.7527 38.657ZM48.8126 38.9334L38.8204 42.5175C39.0463 41.828 39.0919 41.0922 38.9528 40.3801C38.8137 39.6681 38.4946 39.0035 38.0258 38.4497C37.4867 37.8154 36.7713 37.3555 35.9704 37.1284V21.8852H48.8126V38.9334ZM31.5399 11.0293C32.8872 11.0293 34.0272 11.9534 34.364 13.197H28.7158C29.044 11.9534 30.184 11.0293 31.5399 11.0293ZM28.6122 14.7084H34.459V20.3738H28.6122V14.7084ZM28.6122 21.8852H34.459V36.9556H28.6122V21.8852ZM51.7145 15.5634V19.5188C51.7145 19.9938 51.3345 20.3738 50.8595 20.3738H35.9704V14.7084H50.8595C51.3345 14.7084 51.7145 15.0884 51.7145 15.5634ZM39.0536 4.10292C39.7272 4.07701 40.9449 4.80246 42.0245 5.89065C43.104 6.97019 43.8381 8.18792 43.8036 8.86155C43.7863 9.32792 43.3458 10.6666 39.8654 13.2056H35.884C35.7622 12.5051 35.4733 11.8441 35.0418 11.2789C34.6104 10.7136 34.049 10.2607 33.4054 9.95837C35.7458 6.32246 37.8272 4.15474 39.0536 4.10292ZM19.2676 8.85292C19.2417 8.18792 19.9672 6.96155 21.0554 5.88201C22.1349 4.80246 23.344 4.07701 24.0263 4.10292C25.244 4.15474 27.334 6.32246 29.6745 9.94974C28.3876 10.5543 27.4463 11.7547 27.1958 13.197H23.2145C19.7254 10.6579 19.2936 9.31928 19.2676 8.85292ZM11.3567 19.5188V15.5634C11.3567 15.0884 11.7367 14.7084 12.2117 14.7084H27.1008V20.3738H12.2117C11.7454 20.3738 11.3567 19.9938 11.3567 19.5188ZM14.2672 21.8852H27.1095V36.7743C26.1372 36.5511 25.2279 36.1112 24.4495 35.4875C22.4372 33.8811 18.8963 31.912 14.2758 32.5943V21.8852H14.2672ZM7.34083 51.2229C7.34083 51.387 7.20265 51.5252 7.03856 51.5252H2.78947C2.62538 51.5252 2.48719 51.387 2.48719 51.2229V33.0606C2.48719 32.8966 2.62538 32.7584 2.78947 32.7584H7.03856C7.20265 32.7584 7.34083 32.8966 7.34083 33.0606V51.2229ZM54.4436 43.0529C54.2708 43.7784 53.8304 44.4088 53.2172 44.7888C46.1786 49.0984 38.8463 51.2747 33.9408 52.3456C29.1304 53.3906 24.0781 52.9588 19.3454 51.1106C14.2931 49.1329 10.709 48.8479 9.04219 48.8479H8.86083V36.2388C15.7613 31.9552 20.9863 34.6497 23.5081 36.662C24.6755 37.5979 26.0758 38.198 27.5586 38.3979C27.6536 38.4411 27.7572 38.467 27.8695 38.467C27.9126 38.467 27.9472 38.4497 27.9904 38.4411C28.1717 38.4584 28.3531 38.467 28.5345 38.467H34.8217C35.6163 38.467 36.3763 38.8125 36.8945 39.4256C37.4213 40.0388 37.6372 40.8334 37.499 41.6452C37.3781 42.4052 36.8945 43.0529 36.2295 43.4588C36.1863 43.4761 36.1431 43.502 36.0999 43.5366C35.6681 43.7697 35.1672 43.8993 34.6404 43.8993H26.6604C26.2458 43.8993 25.9004 44.2361 25.9004 44.6593C25.9004 45.0825 26.2372 45.4193 26.6604 45.4193H34.6404C35.4349 45.4193 36.1949 45.212 36.8513 44.8493L50.8249 39.8402C51.559 39.5811 52.3708 39.6416 53.079 40.0216C54.1586 40.5916 54.7286 41.8438 54.4436 43.0529Z"
+                              fill="#D3D3D3"/>
+                    </svg>
+                    <div class="form-download__gift-text">
+                        При заказе ремонта
+                        авторский надзор
+                        в&nbsp;подарок
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </div>

@@ -6,4 +6,54 @@
 
 .form-download__title {
   grid-column: 1/-1;
+
+  @include media-tablet {
+    font-size: 24px;
+  }
+}
+
+.form-download__style {
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    @include reset-list;
+    margin-top: 25px;
+    li {
+      position: relative;
+      padding-left: 10px;
+
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}
+
+.form-download__gift {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 57px 165px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @include media-tablet {
+    margin-top: 45px;
+    grid-template-columns: 115px 230px;
+
+    svg {
+      width: 115px;
+      height: 115px;
+    }
+  }
 }

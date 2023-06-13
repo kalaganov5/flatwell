@@ -90,9 +90,11 @@
   }
 }
 
-.project__service {
-  @include media-desktop {
-    padding-left: 1rem;
+.project__data {
+  ul {
+    @include media-desktop {
+      padding-left: 1rem;
+    }
   }
 }
 

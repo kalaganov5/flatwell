@@ -1,8 +1,8 @@
 import { modalManager } from '../utils/utils';
 
-export default class DownloadModal {
-  #buttonsClassName = 'download-modal';
-  #modalID = 'download-project';
+export default class OfferModal {
+  #buttonsClassName = 'get-offer-modal';
+  #modalID = 'get-offer';
   init = () => {
     const buttons = document.querySelectorAll(`.${this.#buttonsClassName}`);
     const modalID = this.#modalID;

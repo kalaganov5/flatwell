@@ -23,3 +23,10 @@ class ModalManager {
 }
 
 export const modalManager = new ModalManager();
+
+export const formatValue = (number, options = {}) => {
+  const locales = 'ru-RU';
+  const formatter = new Intl.NumberFormat(locales, options);
+
+  return formatter.format(number);
+};
