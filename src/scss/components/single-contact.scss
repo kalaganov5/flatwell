@@ -26,6 +26,7 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
+  font-weight: 600;
 
   @include media-tablet {
     font-size: 32px;
@@ -36,6 +37,11 @@
       display: block;
     }
   }
+}
+
+.single-contact__desc {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .single-contact__text {

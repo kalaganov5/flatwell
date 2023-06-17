@@ -60,6 +60,10 @@
 
   @include media-laptop {
     grid-template-columns: repeat(3, 1fr);
+
+    &--2-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @include media-desktop {
@@ -68,6 +72,14 @@
 
     li {
       padding-bottom: 30px;
+    }
+
+    &--2-col {
+      grid-template-columns: repeat(2, 1fr);
+
+      .workflow__header {
+        flex-direction: row;
+      }
     }
   }
 }
