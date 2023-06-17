@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Title</title>
+</head>
+<body class="body">
+<svg class="hidden" height="0" width="0">
+    <symbol fill="none" id="icon-shevron" viewBox="0 0 30 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 1.25L15 14.75L28.5 1.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"></path>
+    </symbol>
+    <symbol fill="none" id="icon-gift" viewBox="0 0 89 83" xmlns="http://www.w3.org/2000/svg">
+        <path d="M84.8156 57.7149C83.9814 57.2713 83.0642 57.0054 82.1221 56.9342C81.1799 56.8631 80.2332 56.988 79.3418 57.3013V30.9388H80.1966C82.2786 30.9388 83.9745 29.2429 83.9745 27.161V20.8461C83.9745 18.7641 82.2786 17.0682 80.1966 17.0682H66.5329C69.6489 14.4485 71.2483 12.2011 71.331 10.2432C71.4551 7.58216 68.6424 4.54883 67.7738 3.69398C66.9051 2.82535 63.9132 0.0401938 61.2245 0.136709C60.1077 0.19186 56.7435 0.357316 49.8633 11.2497C49.6841 11.236 49.5186 11.1946 49.3256 11.1946C49.1463 11.1946 48.9671 11.236 48.7879 11.2497C41.9353 0.371104 38.571 0.19186 37.4542 0.136709C34.7794 -0.0149577 31.7598 2.82535 30.905 3.69398C30.0363 4.56262 27.2374 7.58216 27.3477 10.2432C27.4304 12.1873 29.0436 14.4485 32.1459 17.0682H18.4959C16.4139 17.0682 14.718 18.7641 14.718 20.8461V27.161C14.718 29.2429 16.4139 30.9388 18.4959 30.9388H19.3507V48.5322C17.3791 49.0561 15.2971 49.8972 13.1186 51.1105V48.7803C13.1186 48.0124 12.8136 47.276 12.2706 46.7329C11.7276 46.1899 10.9911 45.8849 10.2232 45.8849H3.45332C2.68539 45.8849 1.94892 46.1899 1.40592 46.7329C0.862917 47.276 0.557861 48.0124 0.557861 48.7803V77.79C0.557861 79.3894 1.85392 80.6855 3.45332 80.6855H10.237C11.0049 80.6855 11.7413 80.3804 12.2843 79.8374C12.8274 79.2944 13.1324 78.558 13.1324 77.79V76.3837C15.3385 76.3561 20.9363 76.6732 28.9885 79.8306C34.1451 81.8437 39.5086 82.864 44.8445 82.864C47.8089 82.864 50.7733 82.5469 53.6826 81.9126C61.7071 80.1753 73.675 76.6043 85.2016 69.5587C85.9662 69.0823 86.6291 68.4594 87.152 67.7258C87.6749 66.9923 88.0477 66.1626 88.2488 65.2844C88.9657 62.2925 87.5594 59.1902 84.8156 57.7149ZM76.9289 58.1561L60.9763 63.8781C61.337 62.7774 61.4098 61.6026 61.1878 60.4658C60.9657 59.329 60.4562 58.268 59.7079 57.384C58.8472 56.3712 57.705 55.637 56.4263 55.2744V30.9388H76.9289V58.1561ZM49.3532 13.6075C51.5041 13.6075 53.3241 15.0828 53.8618 17.0682H44.8445C45.3685 15.0828 47.1885 13.6075 49.3532 13.6075ZM44.6791 19.4811H54.0135V28.526H44.6791V19.4811ZM44.6791 30.9388H54.0135V54.9987H44.6791V30.9388ZM81.5616 20.8461V27.161C81.5616 27.9193 80.955 28.526 80.1966 28.526H56.4263V19.4811H80.1966C80.955 19.4811 81.5616 20.0878 81.5616 20.8461ZM61.3486 2.54959C62.4241 2.50822 64.3682 3.66641 66.0916 5.40368C67.8151 7.12716 68.9871 9.07125 68.932 10.1467C68.9044 10.8913 68.2012 13.0284 62.6447 17.082H56.2885C56.0939 15.9635 55.6327 14.9084 54.9439 14.006C54.2551 13.1035 53.3589 12.3804 52.3313 11.8978C56.0679 6.09307 59.3907 2.63231 61.3486 2.54959ZM29.7606 10.1329C29.7192 9.07125 30.8774 7.11338 32.6147 5.38989C34.3382 3.66641 36.2685 2.50822 37.3577 2.54959C39.3018 2.63231 42.6385 6.09307 46.375 11.884C44.3206 12.8491 42.8177 14.7656 42.4179 17.0682H36.0616C30.4913 13.0146 29.802 10.8775 29.7606 10.1329ZM17.1309 27.161V20.8461C17.1309 20.0878 17.7376 19.4811 18.4959 19.4811H42.2662V28.526H18.4959C17.7513 28.526 17.1309 27.9193 17.1309 27.161ZM21.7774 30.9388H42.28V54.7091C40.7278 54.3528 39.2761 53.6506 38.0333 52.6547C34.8207 50.0902 29.1677 46.9466 21.7912 48.0358V30.9388H21.7774ZM10.7195 77.7763C10.7195 78.0382 10.4989 78.2588 10.237 78.2588H3.45332C3.19135 78.2588 2.97074 78.0382 2.97074 77.7763V48.7803C2.97074 48.5184 3.19135 48.2978 3.45332 48.2978H10.237C10.4989 48.2978 10.7195 48.5184 10.7195 48.7803V77.7763ZM85.9186 64.7329C85.6429 65.8911 84.9397 66.8976 83.9607 67.5043C72.7236 74.3844 61.0177 77.859 53.1862 79.5687C45.5063 81.237 37.4404 80.5476 29.8847 77.597C21.8188 74.4396 16.0968 73.9846 13.4357 73.9846H13.1462V53.8543C24.1627 47.0155 32.5044 51.3173 36.5304 54.5299C38.3941 56.024 40.6297 56.9821 42.997 57.3013C43.1486 57.3702 43.3141 57.4116 43.4933 57.4116C43.5623 57.4116 43.6174 57.384 43.6863 57.3702C43.9759 57.3978 44.2654 57.4116 44.555 57.4116H54.5926C55.861 57.4116 57.0744 57.9631 57.9016 58.942C58.7427 59.921 59.0874 61.1894 58.8668 62.4855C58.6738 63.6988 57.9016 64.7329 56.84 65.381C56.771 65.4085 56.7021 65.4499 56.6332 65.505C55.9438 65.8773 55.1441 66.0841 54.303 66.0841H41.563C40.9012 66.0841 40.3497 66.6219 40.3497 67.2975C40.3497 67.9731 40.8874 68.5108 41.563 68.5108H54.303C55.5715 68.5108 56.7848 68.1799 57.8327 67.6008L80.1415 59.6038C81.3135 59.1902 82.6095 59.2867 83.7401 59.8934C85.4636 60.8034 86.3736 62.8026 85.9186 64.7329Z"
+              fill="white"></path>
+    </symbol>
+    <symbol fill="none" id="icon-ig" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 1.80723C12.6506 1.80723 13.0121 1.80723 14.0964 1.80723C15.0602 1.80723 15.5422 2.04819 15.9036 2.16868C16.3855 2.40964 16.747 2.53012 17.1084 2.89157C17.4699 3.25301 17.7108 3.61446 17.8313 4.09639C17.9518 4.45783 18.0723 4.93976 18.1928 5.90362C18.1928 6.98795 18.1928 7.22892 18.1928 10C18.1928 12.7711 18.1928 13.0121 18.1928 14.0964C18.1928 15.0602 17.9518 15.5422 17.8313 15.9036C17.5904 16.3855 17.4699 16.747 17.1084 17.1084C16.747 17.4699 16.3855 17.7108 15.9036 17.8313C15.5422 17.9518 15.0602 18.0723 14.0964 18.1928C13.0121 18.1928 12.7711 18.1928 10 18.1928C7.22892 18.1928 6.98795 18.1928 5.90362 18.1928C4.93976 18.1928 4.45783 17.9518 4.09639 17.8313C3.61446 17.5904 3.25301 17.4699 2.89157 17.1084C2.53012 16.747 2.28916 16.3855 2.16868 15.9036C2.04819 15.5422 1.92771 15.0602 1.80723 14.0964C1.80723 13.0121 1.80723 12.7711 1.80723 10C1.80723 7.22892 1.80723 6.98795 1.80723 5.90362C1.80723 4.93976 2.04819 4.45783 2.16868 4.09639C2.40964 3.61446 2.53012 3.25301 2.89157 2.89157C3.25301 2.53012 3.61446 2.28916 4.09639 2.16868C4.45783 2.04819 4.93976 1.92771 5.90362 1.80723C6.98795 1.80723 7.3494 1.80723 10 1.80723ZM10 0C7.22892 0 6.98795 0 5.90362 0C4.81928 0 4.09639 0.240965 3.49398 0.481928C2.89157 0.722892 2.28916 1.08434 1.68675 1.68675C1.08434 2.28916 0.843374 2.77109 0.481928 3.49398C0.240965 4.09639 0.120482 4.81928 0 5.90362C0 6.98795 0 7.3494 0 10C0 12.7711 0 13.0121 0 14.0964C0 15.1807 0.240965 15.9036 0.481928 16.506C0.722892 17.1084 1.08434 17.7108 1.68675 18.3133C2.28916 18.9157 2.77109 19.1566 3.49398 19.5181C4.09639 19.759 4.81928 19.8795 5.90362 20C6.98795 20 7.3494 20 10 20C12.6506 20 13.0121 20 14.0964 20C15.1807 20 15.9036 19.759 16.506 19.5181C17.1084 19.2771 17.7108 18.9157 18.3133 18.3133C18.9157 17.7108 19.1566 17.2289 19.5181 16.506C19.759 15.9036 19.8795 15.1807 20 14.0964C20 13.0121 20 12.6506 20 10C20 7.3494 20 6.98795 20 5.90362C20 4.81928 19.759 4.09639 19.5181 3.49398C19.2771 2.89157 18.9157 2.28916 18.3133 1.68675C17.7108 1.08434 17.2289 0.843374 16.506 0.481928C15.9036 0.240965 15.1807 0.120482 14.0964 0C13.0121 0 12.7711 0 10 0Z"
+              fill="white"></path>
+        <path d="M10 4.81928C7.10843 4.81928 4.81928 7.10843 4.81928 10C4.81928 12.8916 7.10843 15.1807 10 15.1807C12.8916 15.1807 15.1807 12.8916 15.1807 10C15.1807 7.10843 12.8916 4.81928 10 4.81928ZM10 13.3735C8.19277 13.3735 6.62651 11.9277 6.62651 10C6.62651 8.19277 8.07229 6.62651 10 6.62651C11.8072 6.62651 13.3735 8.07229 13.3735 10C13.3735 11.8072 11.8072 13.3735 10 13.3735Z"
+              fill="white"></path>
+        <path d="M15.3012 5.90362C15.9666 5.90362 16.506 5.3642 16.506 4.6988C16.506 4.03339 15.9666 3.49398 15.3012 3.49398C14.6358 3.49398 14.0964 4.03339 14.0964 4.6988C14.0964 5.3642 14.6358 5.90362 15.3012 5.90362Z"
+              fill="white"></path>
+    </symbol>
+    <symbol fill="none" id="icon-whatsapp" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.1524 2.84023C10.8683 1.56055 9.1561 0.849609 7.34878 0.849609C3.59146 0.849609 0.54756 3.88294 0.54756 7.62721C0.54756 8.81211 0.880488 9.997 1.45122 10.9923L0.5 14.4996L4.11463 13.5517C5.11342 14.073 6.20732 14.3574 7.34878 14.3574C11.1061 14.3574 14.15 11.3241 14.15 7.57982C14.1024 5.82617 13.4366 4.11992 12.1524 2.84023ZM10.6305 10.0444C10.4878 10.4236 9.82195 10.8027 9.48902 10.8501C9.20366 10.8975 8.82317 10.8975 8.44268 10.8027C8.20488 10.7079 7.87195 10.6132 7.49146 10.4236C5.77927 9.71263 4.68537 8.00638 4.59024 7.86419C4.49512 7.7694 3.87683 6.96367 3.87683 6.11055C3.87683 5.25742 4.30488 4.87825 4.44756 4.68867C4.59024 4.49909 4.78049 4.49909 4.92317 4.49909C5.01829 4.49909 5.16097 4.49909 5.2561 4.49909C5.35122 4.49909 5.4939 4.45169 5.63658 4.78346C5.77927 5.11523 6.11219 5.96836 6.15975 6.01576C6.20732 6.11055 6.20732 6.20534 6.15975 6.30013C6.11219 6.39492 6.06463 6.48971 5.96951 6.5845C5.87439 6.6793 5.77927 6.82148 5.73171 6.86888C5.63658 6.96367 5.54146 7.05846 5.63658 7.20065C5.73171 7.39023 6.06463 7.91159 6.5878 8.38555C7.25366 8.9543 7.77683 9.14388 7.96707 9.23867C8.15732 9.33346 8.25244 9.28607 8.34756 9.19128C8.44268 9.09648 8.77561 8.71732 8.87073 8.52773C8.96585 8.33815 9.10853 8.38555 9.25122 8.43294C9.3939 8.48034 10.25 8.9069 10.3927 9.00169C10.5829 9.09648 10.678 9.14388 10.7256 9.19128C10.7732 9.33346 10.7732 9.66523 10.6305 10.0444Z"
+              fill="white"></path>
+    </symbol>
+    <symbol fill="none" id="icon-tg" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.2001 1.19223L11.2466 11.3908C11.2466 11.3908 10.9732 12.0979 10.2224 11.7587L5.71507 8.17996L5.69417 8.16941C6.30301 7.60329 11.0242 3.20751 11.2305 3.00826C11.5499 2.69967 11.3516 2.51596 10.9807 2.74906L4.00701 7.33521L1.31656 6.39778C1.31656 6.39778 0.893165 6.24182 0.852433 5.9027C0.811165 5.56303 1.3305 5.37931 1.3305 5.37931L12.2986 0.923597C12.2986 0.923597 13.2001 0.513436 13.2001 1.19223V1.19223Z"
+              fill="white"></path>
+    </symbol>
+    <symbol fill="none" id="icon-vk" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.63873 9.54922C3.75297 9.54922 0.966213 6.1333 0.850098 0.449219H3.29744C3.37783 4.62119 5.18208 6.38836 6.61118 6.75272V0.449219H8.91562V4.04732C10.3269 3.89246 11.8096 2.25282 12.3097 0.449219H14.6142C14.4257 1.38462 14.05 2.27029 13.5105 3.05084C12.9711 3.8314 12.2795 4.49003 11.4791 4.98555C12.3726 5.43833 13.1617 6.07919 13.7945 6.86585C14.4273 7.65251 14.8893 8.56709 15.1501 9.54922H12.6134C12.3794 8.69616 11.9036 7.93254 11.2458 7.35405C10.588 6.77557 9.77741 6.40795 8.91562 6.29727V9.54922H8.63873V9.54922Z"
+              fill="white"></path>
+    </symbol>
+</svg>
+<header class="header">
+    <div class="header__main">
+        <div class="header__container container">
+            <a class="header__logo" href="#">
+                <img alt="Логотип FlatWell" class="header__logo-body" height="59" src="images/content/logo.png"
+                     width="289">
+            </a>
+            <div class="header__contact">
+                <div class="header__text">
+                    Звоните
+                </div>
+                <a class="header__link header__phone" href="tel:+79954390351">8 (995) 439-03-51</a>
+            </div>
+            <div class="header__social social">
+                <div class="header__text">
+                    Задайте вопрос
+                </div>
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon" height="10" width="15">
+                                <use xlink:href="#icon-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon" height="11" width="13">
+                                <use xlink:href="#icon-tg"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">
+                            <svg class="social__icon" height="14" width="14">
+                                <use xlink:href="#icon-whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__hamburger">
+                <button aria-expanded="false" aria-label="Открыть/Закрыть меню" class="hamburger__button"
+                        id="header-menu-toggle" type="button">
+                    <span class="hamburger__button--line"></span>
+                    <span class="hamburger__button--line"></span>
+                    <span class="hamburger__button--line"></span>
+                </button>
+            </div>
+            <div class="header__callback">
+                <button class="button button--accent header__link callback-button modal-free-consult" type="button">
+                    Заказать звонок
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__accent">
+        <div class="container">
+            <nav class="header__navigation navigation">
+                <ul class="navigation__list">
+                    <li><a href="#">Дизайн-проекты</a></li>
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Все услуги студии</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__professionalization">
+                Дизайн-студия интерьеров в&nbsp;Казани
+            </div>
+            <h1 class="header__headline headline">
+                Ремонт и&nbsp;отделка квартир за&nbsp;30&nbsp;дней
+            </h1>
+            <ul class="header__benefit">
+                <li>
+                    Реализуем готовый дизайн-проект
+                </li>
+                <li>
+                    Подготовим квартиру к&nbsp;сдаче в&nbsp;аренду
+                </li>
+                <li>
+                    Сделаем косметический ремонт без проекта
+                </li>
+            </ul>
+            <button class="header__cta button modal-free-consult" type="button">
+                Рассчитать стоимость
+            </button>
+            <ul class="header__offer">
+                <li>
+                    <a href="#">
+                        Рассчитать стоимость дизайн-проекта
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Рассчитать стоимость ремонта
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Скачать каталог готовых дизайнов
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main class="main main--service">
+    <section class="evolution">
+        <h2 class="evolution__headline headline container">
+            <span class="hide-mobil">команда </span>flatwell работает<span class="hide-mobil"> в&nbsp;ремонте</span>
+            по&nbsp;<span class="large">3&nbsp;направлениям</span>
+        </h2>
+        <ul class="evolution__list">
+            <li>
+                <div class="evolution__images">
+                    <img alt="" height="209" src="images/content/cosmetic-renovation-1.jpg" width="291">
+                    <img alt="" class="evolution__image-overlay" height="147"
+                         src="images/content/cosmetic-renovation-2.jpg" width="171">
+                </div>
+                <div class="evolution__header">
+                        <span class="evolution__count effect-stroke">
+                            1
+                        </span>
+                    <h3>
+                        косметический ремонт
+                        под инвестиции
+                    </h3>
+                </div>
+                <div class="evolution__desc container">
+                    <div class="evolution__desc-body">
+                        <p>Если вы&nbsp;сдаете квартиру в&nbsp;аренду, то&nbsp;всего за&nbsp;30&nbsp;дней наша команда
+                            сделает ремонт под ключ</p>
+                        <p class="headline">почему это выгодно?</p>
+                        <p>Проведение косметического ремонта увеличивает доходы от&nbsp;аренды и&nbsp;рыночную стоимость
+                            вашей недвижимости в&nbsp;будущем</p>
+                    </div>
+                    <button class="button modal-free-consult">
+                        Оставить заявку
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="evolution__images ">
+                    <img alt="" height="209" src="images/content/cosmetic-ready-style.jpg" width="291">
+                    <img alt="" class="evolution__image-overlay" height="147"
+                         src="images/content/cosmetic-renovation-2.jpg" width="171">
+                </div>
+                <div class="evolution__header container">
+                        <span class="evolution__count effect-stroke">
+                            2
+                        </span>
+                    <h3>
+                        ремонт по готовым стилям
+                    </h3>
+                </div>
+                <div class="evolution__desc container">
+                    <div class="evolution__desc-body">
+                        <p>Готовые стили&nbsp;&mdash; это комплексный пакет документов с&nbsp;различными вариантами
+                            планировки квартиры, схемами и&nbsp;3D-визуализацией.</p>
+                        <p class="bold">Наши дизайнеры составили план дизайн проектов в&nbsp;5&nbsp;стилях: классика,
+                            лофи, сканди, энто
+                            и&nbsp;урбан.</p>
+                        <p>Оставляйте заявку на&nbsp;ремонт и&nbsp;получите расчет стоимости ремонта после замеров.</p>
+                    </div>
+                    <button class="button modal-free-consult">
+                        Скачать пример
+                    </button>
+                </div>
+            </li>
+            <li class="evolution__item evolution__item--form">
+                <div class="evolution__images">
+                    <img alt="" height="209" src="images/content/cosmetic-ready-style.jpg" width="291">
+                    <img alt="" class="evolution__image-overlay" height="147"
+                         src="images/content/cosmetic-renovation-2.jpg" width="171">
+                </div>
+                <div class="evolution__header">
+                        <span class="evolution__count effect-stroke">
+                            3
+                        </span>
+                    <h3 class="">
+                        ремонт по дизайн-проекту
+                    </h3>
+                </div>
+                <div class="evolution__desc container">
+                    <div class="evolution__desc-body">
+                        <p>Если у&nbsp;вас уже есть готовый дизайн-проект от&nbsp;другой студии, то&nbsp;наша компания
+                            готова предоставить услуги ремонта и&nbsp;реализовать его под ключ.</p>
+                    </div>
+                </div>
+                <div class="evolution__form">
+                    <div class="wpcf7 js" dir="ltr" id="wpcf7-f65-o1" lang="en-US">
+                        <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
+                            <ul></ul>
+                        </div>
+                        <form action="/#wpcf7-f65-o1" aria-label="Contact form" class="wpcf7-form init" data-status="init"
+                              enctype="multipart/form-data" method="post" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input name="_wpcf7" type="hidden" value="65">
+                                <input name="_wpcf7_version" type="hidden" value="5.7.7">
+                                <input name="_wpcf7_locale" type="hidden" value="en_US">
+                                <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f65-o1">
+                                <input name="_wpcf7_container_post" type="hidden" value="0">
+                                <input name="_wpcf7_posted_data_hash" type="hidden" value="">
+                            </div>
+                            <div class="single-contact__headline headline">
+                                Получите бесплатный расчет
+                            </div>
+                            <div class="single-contact__desc">
+                                Загрузите свой дизайн-проект, и мы проведём удалённый бесплатный расчёт стоимости
+                                ремонтных работ.
+                            </div>
+                            <label>
+                                <span class="wpcf7-form-control-wrap" data-name="user-file"><input accept="audio/*,video/*,image/*"
+                                                                                                   aria-invalid="false"
+                                                                                                   aria-required="true"
+                                                                                                   class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form__input"
+                                                                                                   name="user-file"
+                                                                                                   size="40"
+                                                                                                   type="file"></span>
+                            </label>
+                            <label>
+                                <span class="visually-hidden">Ваш телефон</span> <span class="wpcf7-form-control-wrap"
+                                                                                       data-name="tel-cf7"><input
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation" name="tel-cf7" placeholder="+7 (000) 000 0000" size="40"
+                                    type="tel" value=""></span>
+                            </label>
+                            <div class="wpcf7__rules">
+                                Оставляя заявку, вы принимаете условия обработки персональных данных
+                            </div>
+
+                            <p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                      value="Жду звонок"><span class="wpcf7-spinner"></span></p>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="extras">
+        <div class="container extras__gift">
+            <div class="headline extras__title">
+                При заказе дизайн-проекта
+                с&nbsp;реализацией, вы&nbsp;получаете
+                <span>2&nbsp;услуги в&nbsp;подарок</span>
+            </div>
+            <div class="extras__present">
+                <svg class="extras__icon" fill="none" height="91" viewBox="0 0 91 91" width="91"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M85.8156 61.7149C84.9814 61.2713 84.0642 61.0054 83.1221 60.9342C82.1799 60.8631 81.2332 60.988 80.3418 61.3013V34.9388H81.1966C83.2786 34.9388 84.9745 33.2429 84.9745 31.161V24.8461C84.9745 22.7641 83.2786 21.0682 81.1966 21.0682H67.5329C70.6489 18.4485 72.2483 16.2011 72.331 14.2432C72.4551 11.5822 69.6424 8.54883 68.7738 7.69398C67.9051 6.82535 64.9132 4.04019 62.2245 4.13671C61.1077 4.19186 57.7435 4.35732 50.8633 15.2497C50.6841 15.236 50.5186 15.1946 50.3256 15.1946C50.1463 15.1946 49.9671 15.236 49.7879 15.2497C42.9353 4.3711 39.571 4.19186 38.4542 4.13671C35.7794 3.98504 32.7598 6.82535 31.905 7.69398C31.0363 8.56262 28.2374 11.5822 28.3477 14.2432C28.4304 16.1873 30.0436 18.4485 33.1459 21.0682H19.4959C17.4139 21.0682 15.718 22.7641 15.718 24.8461V31.161C15.718 33.2429 17.4139 34.9388 19.4959 34.9388H20.3507V52.5322C18.3791 53.0561 16.2971 53.8972 14.1186 55.1105V52.7803C14.1186 52.0124 13.8136 51.276 13.2706 50.7329C12.7276 50.1899 11.9911 49.8849 11.2232 49.8849H4.45332C3.68539 49.8849 2.94892 50.1899 2.40592 50.7329C1.86292 51.276 1.55786 52.0124 1.55786 52.7803V81.79C1.55786 83.3894 2.85392 84.6855 4.45332 84.6855H11.237C12.0049 84.6855 12.7413 84.3804 13.2843 83.8374C13.8274 83.2944 14.1324 82.558 14.1324 81.79V80.3837C16.3385 80.3561 21.9363 80.6732 29.9885 83.8306C35.1451 85.8437 40.5086 86.864 45.8445 86.864C48.8089 86.864 51.7733 86.5469 54.6826 85.9126C62.7071 84.1753 74.675 80.6043 86.2016 73.5587C86.9662 73.0823 87.6291 72.4594 88.152 71.7258C88.6749 70.9923 89.0477 70.1626 89.2488 69.2844C89.9657 66.2925 88.5594 63.1902 85.8156 61.7149ZM77.9289 62.1561L61.9763 67.8781C62.337 66.7774 62.4098 65.6026 62.1878 64.4658C61.9657 63.329 61.4562 62.268 60.7079 61.384C59.8472 60.3712 58.705 59.637 57.4263 59.2744V34.9388H77.9289V62.1561ZM50.3532 17.6075C52.5041 17.6075 54.3241 19.0828 54.8618 21.0682H45.8445C46.3685 19.0828 48.1885 17.6075 50.3532 17.6075ZM45.6791 23.4811H55.0135V32.526H45.6791V23.4811ZM45.6791 34.9388H55.0135V58.9987H45.6791V34.9388ZM82.5616 24.8461V31.161C82.5616 31.9193 81.955 32.526 81.1966 32.526H57.4263V23.4811H81.1966C81.955 23.4811 82.5616 24.0878 82.5616 24.8461ZM62.3486 6.54959C63.4241 6.50822 65.3682 7.66641 67.0916 9.40368C68.8151 11.1272 69.9871 13.0713 69.932 14.1467C69.9044 14.8913 69.2012 17.0284 63.6447 21.082H57.2885C57.0939 19.9635 56.6327 18.9084 55.9439 18.006C55.2551 17.1035 54.3589 16.3804 53.3313 15.8978C57.0679 10.0931 60.3907 6.63231 62.3486 6.54959ZM30.7606 14.1329C30.7192 13.0713 31.8774 11.1134 33.6147 9.38989C35.3382 7.66641 37.2685 6.50822 38.3577 6.54959C40.3018 6.63231 43.6385 10.0931 47.375 15.884C45.3206 16.8491 43.8177 18.7656 43.4179 21.0682H37.0616C31.4913 17.0146 30.802 14.8775 30.7606 14.1329ZM18.1309 31.161V24.8461C18.1309 24.0878 18.7376 23.4811 19.4959 23.4811H43.2662V32.526H19.4959C18.7513 32.526 18.1309 31.9193 18.1309 31.161ZM22.7774 34.9388H43.28V58.7091C41.7278 58.3528 40.2761 57.6506 39.0333 56.6547C35.8207 54.0902 30.1677 50.9466 22.7912 52.0358V34.9388H22.7774ZM11.7195 81.7763C11.7195 82.0382 11.4989 82.2588 11.237 82.2588H4.45332C4.19135 82.2588 3.97074 82.0382 3.97074 81.7763V52.7803C3.97074 52.5184 4.19135 52.2978 4.45332 52.2978H11.237C11.4989 52.2978 11.7195 52.5184 11.7195 52.7803V81.7763ZM86.9186 68.7329C86.6429 69.8911 85.9397 70.8976 84.9607 71.5043C73.7236 78.3844 62.0177 81.859 54.1862 83.5687C46.5063 85.237 38.4404 84.5476 30.8847 81.597C22.8188 78.4396 17.0968 77.9846 14.4357 77.9846H14.1462V57.8543C25.1627 51.0155 33.5044 55.3173 37.5304 58.5299C39.3941 60.024 41.6297 60.9821 43.997 61.3013C44.1486 61.3702 44.3141 61.4116 44.4933 61.4116C44.5623 61.4116 44.6174 61.384 44.6863 61.3702C44.9759 61.3978 45.2654 61.4116 45.555 61.4116H55.5926C56.861 61.4116 58.0744 61.9631 58.9016 62.942C59.7427 63.921 60.0874 65.1894 59.8668 66.4855C59.6738 67.6988 58.9016 68.7329 57.84 69.381C57.771 69.4085 57.7021 69.4499 57.6332 69.505C56.9438 69.8773 56.1441 70.0841 55.303 70.0841H42.563C41.9012 70.0841 41.3497 70.6219 41.3497 71.2975C41.3497 71.9731 41.8874 72.5108 42.563 72.5108H55.303C56.5715 72.5108 57.7848 72.1799 58.8327 71.6008L81.1415 63.6038C82.3135 63.1902 83.6095 63.2867 84.7401 63.8934C86.4636 64.8034 87.3736 66.8026 86.9186 68.7329Z"
+                          fill="white"/>
+                </svg>
+
+                <img alt="" class="extras__images" height="414" src="images/content/room-1.jpg" width="455">
+                <img alt="" class="extras__images" height="414" src="images/content/room-2.jpg" width="455">
+            </div>
+            <ul class="extras__giftservice giftservice">
+                <li>
+                    <div class="giftservice__title">
+                        Подбор материалов
+                    </div>
+                    <div class="giftservice__text">
+                        <p>&mdash;&nbsp;подберём материалы по&nbsp;выгодной цене</p>
+                        <p>&mdash;&nbsp;привезем и&nbsp;проверим на&nbsp;соответствие качеству</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="giftservice__title">
+                        Авторский надзор
+                    </div>
+                    <div class="giftservice__text">
+                        Наши дизайнеры будут сопровождать ремонтные работы по&nbsp;дизайн-проекту, чтобы вы&nbsp;были
+                        уверены, что выполняется по&nbsp;плану на&nbsp;100%.
+                    </div>
+                </li>
+            </ul>
+            <button class="extras__giftbutton button giftservice__button modal-free-consult" type="button">
+                Узнать подробности
+            </button>
+        </div>
+    </section>
+    <section class="workflow">
+        <div class="container">
+            <h2 class="headline workflow__headline">
+                Этапы работы
+                <span>над дизайн-проектом</span>
+            </h2>
+            <ul class="workflow__list workflow__list--2-col">
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">1</span>
+                        <h3>Планирование</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Определяем план работы и&nbsp;ремонта. Оцениваем бюджет, сроки и&nbsp;ресурсы, необходимые
+                            для ремонта.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">2</span>
+                        <h3>Демонтаж</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Удаляем старые материалы и&nbsp;конструкции, чтобы подготовить поверхность для установки
+                            новых материалов.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">3</span>
+                        <h3>Подготовка поверхности</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Проверяем готовность поверхности к&nbsp;работе и&nbsp;дополнительно шлифуем, очищаем или
+                            заменяем.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">4</span>
+                        <h3>Установка новых материалов</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Устанавливаем новые полы, стены, потолки и&nbsp;другие элементы. Могут также быть установлены
+                            новые окна и&nbsp;двери.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">5</span>
+                        <h3>Отделка и установка</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Производим отделку поверхности новыми материалами. Устанавливаем сантехнику
+                            и&nbsp;электрику</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="workflow__header">
+                        <span class="workflow__sequence">6</span>
+                        <h3>Финальная отделка</h3>
+                    </div>
+                    <div class="workflow__text">
+                        <p>Устанавливаем декоративные элементы, организуем услуги декорирования и&nbsp;меблировки по&nbsp;необходимости.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__contact">
+            <div class="footer__contact-title">
+                Не&nbsp;нашли ответ на&nbsp;вопрос?
+            </div>
+            <div class="footer__text">
+                Тогда напишите свой вопрос
+                и&nbsp;мы&nbsp;свяжемся
+                в&nbsp;течение 10&nbsp;минут
+            </div>
+            <ul class="footer__social social__list social__list--size-m social__list--colored">
+                <li class="social__item">
+                    <a class="social__link social__link--vk" href="#">
+                        <svg class="social__icon" height="10" width="15">
+                            <use xlink:href="#icon-vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--wa" href="#">
+                        <svg class="social__icon" height="14" width="14">
+                            <use xlink:href="#icon-whatsapp"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--tg" href="#">
+                        <svg class="social__icon" height="11" width="13">
+                            <use xlink:href="#icon-tg"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__form single-contact__form single-contact__form--d-column">
+            <div class="wpcf7 js">
+                <form action="/" class="wpcf7-form" method="post">
+                    <div class="single-contact__label">
+                        Связаться с&nbsp;дизайнером
+                        для бесплатной консультации
+                    </div>
+                    <label><span class="visually-hidden">Телефон</span>
+                        <span class="wpcf7-form-control-wrap" data-name="tel-cf7">
+                                <input aria-invalid="false"
+                                       aria-required="true"
+                                       class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation"
+                                       name="tel-cf7" placeholder="+7 (000) 000 0000"
+                                       size="40" type="tel" value="">
+                            </span><br>
+                    </label>
+                    <div class="wpcf7__rules">
+                        Нажимая кнопку, вы соглашаетесь с&nbsp;условиями публичной оферты
+                    </div>
+                    <p>
+                        <input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                               value="Жду звонок"><span class="wpcf7-spinner">
+                        </span>
+                </form>
+            </div>
+        </div>
+        <div class="footer__address">
+            <p>Наш офис по&nbsp;адресу:<br>
+                г. Казань, ул. Чистопольская 61Д, офис 312</p>
+            <p>Мы&nbsp;работаем<br>
+                Пн-пт 08:30&nbsp;&mdash; 17:30</p>
+            <p>ООО &laquo;РИЭЛТИ&raquo;<br>
+                ИНН: 1660127855</p>
+        </div>
+        <div class="footer__bottom">
+            <a class="footer__link" href="#">Политика конфиденциальности</a>
+            <a class="footer__link" href="#">Соглашение о&nbsp;неразглашении персональных данных</a>
+            <p>&copy;&nbsp;2023&nbsp;Риэлти. Все права защищены</p>
+        </div>
+    </div>
+</footer>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="free-consult">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">
+                    Связаться с&nbsp;дизайнером <span class="hide-to-tablet">для бесплатной консультации</span>
+                </h2>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <div class="wpcf7 js" dir="ltr" id="wpcf7-f45-p46-o1" lang="en-US">
+                    <form action="#" aria-label="Contact form" class="wpcf7-form init"
+                          data-status="init" method="post" novalidate="novalidate">
+                        <div class="form__item">
+                            <label>
+                                <span class="visually-hidden">Ваше имя</span> <span class="wpcf7-form-control-wrap"
+                                                                                    data-name="name-cf7"><input
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input"
+                                    name="name-cf7" placeholder="Имя" size="40" type="text"
+                                    value=""></span>
+                            </label>
+                        </div>
+                        <div class="form__item">
+                            <label>
+                                <span class="visually-hidden">Ваш телефон</span> <span class="wpcf7-form-control-wrap"
+                                                                                       data-name="tel-cf7"><input
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel wpcf7-not-valid form__input phone-validation"
+                                    name="tel-cf7" placeholder="+7 (000) 000 0000" size="40"
+                                    type="tel" value="">
+                            <span aria-hidden="true" class="wpcf7-not-valid-tip">Please fill out this field.</span>
+                            </span>
+                            </label>
+                        </div>
+                        <div class="form__item wpcf7__rules">
+                            Оставляя заявку, вы принимаете условия обработки персональных данных
+                        </div>
+
+                        <div class="form__item"><input class="wpcf7-form-control has-spinner wpcf7-submit button"
+                                                       type="submit" value="Жду звонок"><span
+                                class="wpcf7-spinner"></span></div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-message">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <main class="modal__content modal__content--message" id="modal-2-content">
+                <div>Принято!</div>
+                <div>Мы скоро с вами свяжемся</div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-calculate">
+    <div class="modal__overlay" tabindex="-1">
+        <div aria-labelledby="modal-3-title" aria-modal="true" class="modal__container modal__container--calculate"
+             role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <main class="modal__content modal__content--calculate-form" id="modal-3-content">
+                <h2 class="calculate-form__headline" id="modal-3-title">
+                    калькулятор расчета цены дизайн-проекта
+                </h2>
+                <div class="calculate-form__item ">
+                    <div class="calculate-form__subitem calculate-form__subitem--tariff">
+                        <div class="calculate-form__title">
+                            Выберите тариф
+                        </div>
+                        <input checked class="visually-hidden calculate-form__radio-input" data-price="850"
+                               id="select-tariff--drawing" name="select-tariff" type="radio" value="drawing">
+                        <label class="calculate-form__radio-label" for="select-tariff--drawing">
+                            <svg fill="none" height="48" viewBox="0 0 48 48" width="48"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.23525 0H43.7647C46.1038 0 48 1.89619 48 4.23525V43.7647C48 46.1037 46.1038 47.9999 43.7648 47.9999H4.23525C1.89619 48 0 46.1038 0 43.7648V4.23525C0 1.89619 1.89619 0 4.23525 0ZM2.82356 20.4706V31.0588H11.2942C11.6399 31.0588 11.9737 31.1857 12.2321 31.4154L18.5851 37.0625C19.1678 37.5804 19.2203 38.4728 18.7023 39.0556C18.1843 39.6383 17.2919 39.6908 16.7092 39.1729L10.7573 33.8824H2.82356V43.7648C2.82356 44.5445 3.45562 45.1765 4.23534 45.1765H43.7648C44.5445 45.1765 45.1765 44.5445 45.1765 43.7648V20.4706H40.9413C40.1616 20.4706 39.5295 19.8385 39.5295 19.0588C39.5295 18.2791 40.1616 17.647 40.9413 17.647H45.1765V4.23525C45.1765 3.45553 44.5445 2.82347 43.7648 2.82347H16.9412V5.64703C16.9412 6.42675 16.3091 7.05881 15.5294 7.05881C14.7497 7.05881 14.1176 6.42675 14.1176 5.64703V2.82356H4.23525C3.45553 2.82356 2.82347 3.45563 2.82347 4.23534V17.6471H14.1176V14.8236C14.1176 14.0438 14.7497 13.4118 15.5294 13.4118C16.3091 13.4118 16.9412 14.0438 16.9412 14.8236V17.6471H31.0588C31.8385 17.6471 32.4706 18.2792 32.4706 19.0589C32.4706 19.8386 31.8385 20.4707 31.0588 20.4707H28.2352V32.4707C28.2352 33.2504 27.6032 33.8825 26.8235 33.8825H22.5882C21.8085 33.8825 21.1764 33.2504 21.1764 32.4707C21.1764 31.691 21.8085 31.0589 22.5882 31.0589H25.4118V20.4706H2.82356Z"
+                                      fill="#CFCFCF"/>
+                            </svg>
+                            <span class="calculate-form__radio-text">
+                                Чертежи
+                            </span>
+                        </label>
+                        <input class="visually-hidden calculate-form__radio-input" data-price="1200"
+                               id="select-tariff--drawing-collage"
+                               name="select-tariff" type="radio" value="drawing_collage">
+                        <label class="calculate-form__radio-label" for="select-tariff--drawing-collage">
+                            <svg fill="none" height="52" viewBox="0 0 46 52" width="46"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44.2795 17.1894H31.8234L30.3906 12.6811C31.2593 11.7502 31.7924 10.5023 31.7924 9.13159C31.7924 7.04184 30.5725 5.19767 28.701 4.37065V3.09949C28.701 1.93213 27.7513 0.982422 26.584 0.982422C25.4166 0.982422 24.4669 1.93213 24.4669 3.09949V4.37085C22.5954 5.19777 21.3755 7.04194 21.3755 9.13169C21.3755 10.5024 21.9086 11.7502 22.7773 12.6812L21.3445 17.1895H9.97697V13.3366C9.97696 13.1941 9.93951 13.0542 9.86837 12.9308C9.79723 12.8074 9.6949 12.7049 9.57164 12.6335C9.44387 12.5594 9.33947 12.4893 9.23851 12.4213C8.58394 11.9811 8.15017 11.8018 6.4684 11.8018C4.02003 11.8018 0.268311 14.5794 0.268311 18.0019V45.1573C0.268311 48.576 3.0497 51.3574 6.4684 51.3574H44.2796C44.4951 51.3574 44.7018 51.2718 44.8541 51.1194C45.0065 50.9671 45.0921 50.7604 45.0921 50.5449V18.0019C45.092 17.7864 45.0064 17.5797 44.854 17.4274C44.7016 17.275 44.495 17.1894 44.2795 17.1894ZM34.2288 30.1226L33.7855 33.1003L32.0809 27.7372H33.4708L34.2288 30.1226ZM17.3332 26.1123C17.1686 26.1123 17.0296 25.9732 17.0296 25.8086C17.0296 25.6439 17.1686 25.5048 17.3332 25.5048H35.8347C35.9993 25.5048 36.1384 25.6439 36.1384 25.8087C36.1384 25.9733 35.9993 26.1123 35.8347 26.1123H17.3332ZM19.697 27.7373H21.0869L19.3824 33.1004L18.9391 30.1227L19.697 27.7373ZM25.3894 14.2L22.313 23.8797H20.9231L24.1479 13.7332C24.54 13.9414 24.9572 14.0983 25.3894 14.2ZM25.6279 18.8144H27.54L29.1499 23.8797H24.0181L25.6279 18.8144ZM26.1443 17.1894L26.5839 15.8063L27.0234 17.1894H26.1443ZM30.8549 23.8797L27.7783 14.2001C28.2105 14.0984 28.6277 13.9415 29.0197 13.7333L32.2445 23.8798L30.8549 23.8797ZM25.5202 5.70863C25.6858 5.65723 25.8307 5.55418 25.9335 5.41454C26.0364 5.27491 26.0919 5.10603 26.0919 4.93259V3.09939C26.0919 2.83269 26.3173 2.60732 26.584 2.60732C26.8507 2.60732 27.076 2.83269 27.076 3.09939V4.93259C27.076 5.10603 27.1315 5.27491 27.2344 5.41454C27.3372 5.55418 27.4821 5.65723 27.6477 5.70863C29.1548 6.17623 30.1674 7.55179 30.1674 9.13159C30.1674 11.1074 28.56 12.7148 26.5841 12.7148C24.6082 12.7148 23.0007 11.1074 23.0007 9.13159C23.0006 7.55189 24.0131 6.17633 25.5202 5.70863ZM1.89321 18.0019C1.89321 15.4981 4.92231 13.4268 6.46829 13.4268C7.82172 13.4268 7.98147 13.5342 8.33156 13.7696L8.35197 13.7834V39.2495C7.74285 39.0558 7.10749 38.9572 6.46829 38.9571C4.65886 38.9571 3.02766 39.7365 1.89321 40.977V18.0019ZM43.467 49.7324H6.46829C3.94558 49.7324 1.89321 47.68 1.89321 45.1573C1.89321 42.6345 3.94558 40.5821 6.46829 40.5821C7.27189 40.5818 8.0614 40.7931 8.75731 41.195C8.8808 41.2666 9.02097 41.3043 9.16371 41.3045C9.30645 41.3047 9.44671 41.2672 9.57037 41.1959C9.69403 41.1247 9.79672 41.022 9.8681 40.8984C9.93948 40.7748 9.97704 40.6346 9.97697 40.4919V18.8144H20.828L19.218 23.8797H17.3331C16.2696 23.8797 15.4045 24.745 15.4045 25.8086C15.4045 26.8721 16.2697 27.7372 17.3331 27.7372H17.9919L17.3332 29.8098C17.2957 29.9279 17.2856 30.053 17.3039 30.1755L18.2911 36.8069C18.3198 36.9996 18.4168 37.1755 18.5644 37.3027C18.712 37.4299 18.9003 37.4998 19.0952 37.4997C19.2676 37.4997 19.4355 37.4448 19.5746 37.3429C19.7137 37.2411 19.8169 37.0976 19.8691 36.9333L22.7918 27.7372H30.3758L33.2986 36.9333C33.3542 37.1083 33.4674 37.2593 33.6198 37.3617C33.7722 37.464 33.9548 37.5118 34.1378 37.4971C34.3208 37.4825 34.4935 37.4062 34.6276 37.2809C34.7618 37.1555 34.8495 36.9885 34.8765 36.8069L35.8637 30.1755C35.882 30.053 35.872 29.9279 35.8344 29.8098L35.1757 27.7372H35.8346C36.8981 27.7372 37.7633 26.8719 37.7633 25.8085C37.7633 24.7449 36.898 23.8797 35.8346 23.8797H33.9496L32.3397 18.8144H43.4669V49.7324H43.467ZM36.0936 39.7276H14.8158C13.2131 39.7276 11.909 41.0317 11.909 42.6344V43.4721C11.909 45.0749 13.2131 46.3788 14.8158 46.3788H36.0936C36.2362 46.3788 36.3763 46.3413 36.4998 46.27L40.8527 43.757C40.9762 43.6857 41.0788 43.5831 41.1501 43.4596C41.2214 43.3361 41.259 43.1959 41.259 43.0533C41.259 42.9107 41.2214 42.7706 41.1501 42.647C41.0788 42.5235 40.9762 42.4209 40.8527 42.3496L36.4998 39.8365C36.3763 39.7652 36.2362 39.7276 36.0936 39.7276ZM17.3866 41.3526H35.281V42.2408H17.3866V41.3526ZM17.3866 43.8658H35.281V44.7538H17.3866V43.8658ZM13.534 43.4721V42.6344C13.534 41.9276 14.109 41.3526 14.8158 41.3526H15.7616V44.7538H14.8158C14.109 44.7538 13.534 44.1789 13.534 43.4721ZM36.9061 44.1591V41.9474L38.8214 43.0533L36.9061 44.1591ZM26.584 11.8903C28.1053 11.8903 29.3428 10.6527 29.3428 9.13159C29.3428 7.61029 28.1052 6.37275 26.584 6.37275C25.0628 6.37275 23.8251 7.61039 23.8251 9.13159C23.8251 10.6528 25.0627 11.8903 26.584 11.8903ZM26.584 7.99775C27.2092 7.99775 27.7178 8.50637 27.7178 9.13159C27.7178 9.75671 27.2092 10.2653 26.584 10.2653C25.9587 10.2653 25.4501 9.75671 25.4501 9.13159C25.4501 8.50637 25.9586 7.99775 26.584 7.99775Z"
+                                      fill="#CFCFCF"/>
+                            </svg>
+                            <span class="calculate-form__radio-text">
+                                Чертеж + коллаж
+                            </span>
+                        </label>
+                        <input class="visually-hidden calculate-form__radio-input" data-price="1700"
+                               id="select-tariff--project"
+                               name="select-tariff" type="radio" value="design_project">
+                        <label class="calculate-form__radio-label" for="select-tariff--project">
+                            <svg fill="none" height="52" viewBox="0 0 46 52" width="46"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44.2795 17.1894H31.8234L30.3906 12.6811C31.2593 11.7502 31.7924 10.5023 31.7924 9.13159C31.7924 7.04184 30.5725 5.19767 28.701 4.37065V3.09949C28.701 1.93213 27.7513 0.982422 26.584 0.982422C25.4166 0.982422 24.4669 1.93213 24.4669 3.09949V4.37085C22.5954 5.19777 21.3755 7.04194 21.3755 9.13169C21.3755 10.5024 21.9086 11.7502 22.7773 12.6812L21.3445 17.1895H9.97697V13.3366C9.97696 13.1941 9.93951 13.0542 9.86837 12.9308C9.79723 12.8074 9.6949 12.7049 9.57164 12.6335C9.44387 12.5594 9.33947 12.4893 9.23851 12.4213C8.58394 11.9811 8.15017 11.8018 6.4684 11.8018C4.02003 11.8018 0.268311 14.5794 0.268311 18.0019V45.1573C0.268311 48.576 3.0497 51.3574 6.4684 51.3574H44.2796C44.4951 51.3574 44.7018 51.2718 44.8541 51.1194C45.0065 50.9671 45.0921 50.7604 45.0921 50.5449V18.0019C45.092 17.7864 45.0064 17.5797 44.854 17.4274C44.7016 17.275 44.495 17.1894 44.2795 17.1894ZM34.2288 30.1226L33.7855 33.1003L32.0809 27.7372H33.4708L34.2288 30.1226ZM17.3332 26.1123C17.1686 26.1123 17.0296 25.9732 17.0296 25.8086C17.0296 25.6439 17.1686 25.5048 17.3332 25.5048H35.8347C35.9993 25.5048 36.1384 25.6439 36.1384 25.8087C36.1384 25.9733 35.9993 26.1123 35.8347 26.1123H17.3332ZM19.697 27.7373H21.0869L19.3824 33.1004L18.9391 30.1227L19.697 27.7373ZM25.3894 14.2L22.313 23.8797H20.9231L24.1479 13.7332C24.54 13.9414 24.9572 14.0983 25.3894 14.2ZM25.6279 18.8144H27.54L29.1499 23.8797H24.0181L25.6279 18.8144ZM26.1443 17.1894L26.5839 15.8063L27.0234 17.1894H26.1443ZM30.8549 23.8797L27.7783 14.2001C28.2105 14.0984 28.6277 13.9415 29.0197 13.7333L32.2445 23.8798L30.8549 23.8797ZM25.5202 5.70863C25.6858 5.65723 25.8307 5.55418 25.9335 5.41454C26.0364 5.27491 26.0919 5.10603 26.0919 4.93259V3.09939C26.0919 2.83269 26.3173 2.60732 26.584 2.60732C26.8507 2.60732 27.076 2.83269 27.076 3.09939V4.93259C27.076 5.10603 27.1315 5.27491 27.2344 5.41454C27.3372 5.55418 27.4821 5.65723 27.6477 5.70863C29.1548 6.17623 30.1674 7.55179 30.1674 9.13159C30.1674 11.1074 28.56 12.7148 26.5841 12.7148C24.6082 12.7148 23.0007 11.1074 23.0007 9.13159C23.0006 7.55189 24.0131 6.17633 25.5202 5.70863ZM1.89321 18.0019C1.89321 15.4981 4.92231 13.4268 6.46829 13.4268C7.82172 13.4268 7.98147 13.5342 8.33156 13.7696L8.35197 13.7834V39.2495C7.74285 39.0558 7.10749 38.9572 6.46829 38.9571C4.65886 38.9571 3.02766 39.7365 1.89321 40.977V18.0019ZM43.467 49.7324H6.46829C3.94558 49.7324 1.89321 47.68 1.89321 45.1573C1.89321 42.6345 3.94558 40.5821 6.46829 40.5821C7.27189 40.5818 8.0614 40.7931 8.75731 41.195C8.8808 41.2666 9.02097 41.3043 9.16371 41.3045C9.30645 41.3047 9.44671 41.2672 9.57037 41.1959C9.69403 41.1247 9.79672 41.022 9.8681 40.8984C9.93948 40.7748 9.97704 40.6346 9.97697 40.4919V18.8144H20.828L19.218 23.8797H17.3331C16.2696 23.8797 15.4045 24.745 15.4045 25.8086C15.4045 26.8721 16.2697 27.7372 17.3331 27.7372H17.9919L17.3332 29.8098C17.2957 29.9279 17.2856 30.053 17.3039 30.1755L18.2911 36.8069C18.3198 36.9996 18.4168 37.1755 18.5644 37.3027C18.712 37.4299 18.9003 37.4998 19.0952 37.4997C19.2676 37.4997 19.4355 37.4448 19.5746 37.3429C19.7137 37.2411 19.8169 37.0976 19.8691 36.9333L22.7918 27.7372H30.3758L33.2986 36.9333C33.3542 37.1083 33.4674 37.2593 33.6198 37.3617C33.7722 37.464 33.9548 37.5118 34.1378 37.4971C34.3208 37.4825 34.4935 37.4062 34.6276 37.2809C34.7618 37.1555 34.8495 36.9885 34.8765 36.8069L35.8637 30.1755C35.882 30.053 35.872 29.9279 35.8344 29.8098L35.1757 27.7372H35.8346C36.8981 27.7372 37.7633 26.8719 37.7633 25.8085C37.7633 24.7449 36.898 23.8797 35.8346 23.8797H33.9496L32.3397 18.8144H43.4669V49.7324H43.467ZM36.0936 39.7276H14.8158C13.2131 39.7276 11.909 41.0317 11.909 42.6344V43.4721C11.909 45.0749 13.2131 46.3788 14.8158 46.3788H36.0936C36.2362 46.3788 36.3763 46.3413 36.4998 46.27L40.8527 43.757C40.9762 43.6857 41.0788 43.5831 41.1501 43.4596C41.2214 43.3361 41.259 43.1959 41.259 43.0533C41.259 42.9107 41.2214 42.7706 41.1501 42.647C41.0788 42.5235 40.9762 42.4209 40.8527 42.3496L36.4998 39.8365C36.3763 39.7652 36.2362 39.7276 36.0936 39.7276ZM17.3866 41.3526H35.281V42.2408H17.3866V41.3526ZM17.3866 43.8658H35.281V44.7538H17.3866V43.8658ZM13.534 43.4721V42.6344C13.534 41.9276 14.109 41.3526 14.8158 41.3526H15.7616V44.7538H14.8158C14.109 44.7538 13.534 44.1789 13.534 43.4721ZM36.9061 44.1591V41.9474L38.8214 43.0533L36.9061 44.1591ZM26.584 11.8903C28.1053 11.8903 29.3428 10.6527 29.3428 9.13159C29.3428 7.61029 28.1052 6.37275 26.584 6.37275C25.0628 6.37275 23.8251 7.61039 23.8251 9.13159C23.8251 10.6528 25.0627 11.8903 26.584 11.8903ZM26.584 7.99775C27.2092 7.99775 27.7178 8.50637 27.7178 9.13159C27.7178 9.75671 27.2092 10.2653 26.584 10.2653C25.9587 10.2653 25.4501 9.75671 25.4501 9.13159C25.4501 8.50637 25.9586 7.99775 26.584 7.99775Z"
+                                      fill="#CFCFCF"/>
+                            </svg>
+                            <span class="calculate-form__radio-text">
+                                Дизайн–проект
+                            </span>
+                        </label>
+                        <input class="visually-hidden calculate-form__radio-input" data-price="2000"
+                               id="select-tariff--all"
+                               name="select-tariff" type="radio" value="all_inclusive">
+                        <label class="calculate-form__radio-label" for="select-tariff--all">
+                            <svg fill="none" height="52" viewBox="0 0 46 52" width="46"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44.2795 17.1894H31.8234L30.3906 12.6811C31.2593 11.7502 31.7924 10.5023 31.7924 9.13159C31.7924 7.04184 30.5725 5.19767 28.701 4.37065V3.09949C28.701 1.93213 27.7513 0.982422 26.584 0.982422C25.4166 0.982422 24.4669 1.93213 24.4669 3.09949V4.37085C22.5954 5.19777 21.3755 7.04194 21.3755 9.13169C21.3755 10.5024 21.9086 11.7502 22.7773 12.6812L21.3445 17.1895H9.97697V13.3366C9.97696 13.1941 9.93951 13.0542 9.86837 12.9308C9.79723 12.8074 9.6949 12.7049 9.57164 12.6335C9.44387 12.5594 9.33947 12.4893 9.23851 12.4213C8.58394 11.9811 8.15017 11.8018 6.4684 11.8018C4.02003 11.8018 0.268311 14.5794 0.268311 18.0019V45.1573C0.268311 48.576 3.0497 51.3574 6.4684 51.3574H44.2796C44.4951 51.3574 44.7018 51.2718 44.8541 51.1194C45.0065 50.9671 45.0921 50.7604 45.0921 50.5449V18.0019C45.092 17.7864 45.0064 17.5797 44.854 17.4274C44.7016 17.275 44.495 17.1894 44.2795 17.1894ZM34.2288 30.1226L33.7855 33.1003L32.0809 27.7372H33.4708L34.2288 30.1226ZM17.3332 26.1123C17.1686 26.1123 17.0296 25.9732 17.0296 25.8086C17.0296 25.6439 17.1686 25.5048 17.3332 25.5048H35.8347C35.9993 25.5048 36.1384 25.6439 36.1384 25.8087C36.1384 25.9733 35.9993 26.1123 35.8347 26.1123H17.3332ZM19.697 27.7373H21.0869L19.3824 33.1004L18.9391 30.1227L19.697 27.7373ZM25.3894 14.2L22.313 23.8797H20.9231L24.1479 13.7332C24.54 13.9414 24.9572 14.0983 25.3894 14.2ZM25.6279 18.8144H27.54L29.1499 23.8797H24.0181L25.6279 18.8144ZM26.1443 17.1894L26.5839 15.8063L27.0234 17.1894H26.1443ZM30.8549 23.8797L27.7783 14.2001C28.2105 14.0984 28.6277 13.9415 29.0197 13.7333L32.2445 23.8798L30.8549 23.8797ZM25.5202 5.70863C25.6858 5.65723 25.8307 5.55418 25.9335 5.41454C26.0364 5.27491 26.0919 5.10603 26.0919 4.93259V3.09939C26.0919 2.83269 26.3173 2.60732 26.584 2.60732C26.8507 2.60732 27.076 2.83269 27.076 3.09939V4.93259C27.076 5.10603 27.1315 5.27491 27.2344 5.41454C27.3372 5.55418 27.4821 5.65723 27.6477 5.70863C29.1548 6.17623 30.1674 7.55179 30.1674 9.13159C30.1674 11.1074 28.56 12.7148 26.5841 12.7148C24.6082 12.7148 23.0007 11.1074 23.0007 9.13159C23.0006 7.55189 24.0131 6.17633 25.5202 5.70863ZM1.89321 18.0019C1.89321 15.4981 4.92231 13.4268 6.46829 13.4268C7.82172 13.4268 7.98147 13.5342 8.33156 13.7696L8.35197 13.7834V39.2495C7.74285 39.0558 7.10749 38.9572 6.46829 38.9571C4.65886 38.9571 3.02766 39.7365 1.89321 40.977V18.0019ZM43.467 49.7324H6.46829C3.94558 49.7324 1.89321 47.68 1.89321 45.1573C1.89321 42.6345 3.94558 40.5821 6.46829 40.5821C7.27189 40.5818 8.0614 40.7931 8.75731 41.195C8.8808 41.2666 9.02097 41.3043 9.16371 41.3045C9.30645 41.3047 9.44671 41.2672 9.57037 41.1959C9.69403 41.1247 9.79672 41.022 9.8681 40.8984C9.93948 40.7748 9.97704 40.6346 9.97697 40.4919V18.8144H20.828L19.218 23.8797H17.3331C16.2696 23.8797 15.4045 24.745 15.4045 25.8086C15.4045 26.8721 16.2697 27.7372 17.3331 27.7372H17.9919L17.3332 29.8098C17.2957 29.9279 17.2856 30.053 17.3039 30.1755L18.2911 36.8069C18.3198 36.9996 18.4168 37.1755 18.5644 37.3027C18.712 37.4299 18.9003 37.4998 19.0952 37.4997C19.2676 37.4997 19.4355 37.4448 19.5746 37.3429C19.7137 37.2411 19.8169 37.0976 19.8691 36.9333L22.7918 27.7372H30.3758L33.2986 36.9333C33.3542 37.1083 33.4674 37.2593 33.6198 37.3617C33.7722 37.464 33.9548 37.5118 34.1378 37.4971C34.3208 37.4825 34.4935 37.4062 34.6276 37.2809C34.7618 37.1555 34.8495 36.9885 34.8765 36.8069L35.8637 30.1755C35.882 30.053 35.872 29.9279 35.8344 29.8098L35.1757 27.7372H35.8346C36.8981 27.7372 37.7633 26.8719 37.7633 25.8085C37.7633 24.7449 36.898 23.8797 35.8346 23.8797H33.9496L32.3397 18.8144H43.4669V49.7324H43.467ZM36.0936 39.7276H14.8158C13.2131 39.7276 11.909 41.0317 11.909 42.6344V43.4721C11.909 45.0749 13.2131 46.3788 14.8158 46.3788H36.0936C36.2362 46.3788 36.3763 46.3413 36.4998 46.27L40.8527 43.757C40.9762 43.6857 41.0788 43.5831 41.1501 43.4596C41.2214 43.3361 41.259 43.1959 41.259 43.0533C41.259 42.9107 41.2214 42.7706 41.1501 42.647C41.0788 42.5235 40.9762 42.4209 40.8527 42.3496L36.4998 39.8365C36.3763 39.7652 36.2362 39.7276 36.0936 39.7276ZM17.3866 41.3526H35.281V42.2408H17.3866V41.3526ZM17.3866 43.8658H35.281V44.7538H17.3866V43.8658ZM13.534 43.4721V42.6344C13.534 41.9276 14.109 41.3526 14.8158 41.3526H15.7616V44.7538H14.8158C14.109 44.7538 13.534 44.1789 13.534 43.4721ZM36.9061 44.1591V41.9474L38.8214 43.0533L36.9061 44.1591ZM26.584 11.8903C28.1053 11.8903 29.3428 10.6527 29.3428 9.13159C29.3428 7.61029 28.1052 6.37275 26.584 6.37275C25.0628 6.37275 23.8251 7.61039 23.8251 9.13159C23.8251 10.6528 25.0627 11.8903 26.584 11.8903ZM26.584 7.99775C27.2092 7.99775 27.7178 8.50637 27.7178 9.13159C27.7178 9.75671 27.2092 10.2653 26.584 10.2653C25.9587 10.2653 25.4501 9.75671 25.4501 9.13159C25.4501 8.50637 25.9586 7.99775 26.584 7.99775Z"
+                                      fill="#CFCFCF"/>
+                            </svg>
+                            <span class="calculate-form__radio-text">
+                                Все включено
+                            </span>
+                        </label>
+                    </div>
+                    <div class="calculate-form__subitem calculate-form__subitem--area">
+                        <div class="calculate-form__title">
+                            Площадь помещения
+                        </div>
+                    </div>
+                    <div class="calculate-form__subitem calculate-form__subitem--range">
+                        <div class="calculate-form__range" id="calculate-form__range"></div>
+                    </div>
+                    <div class="calculate-form__subitem">
+                        <div class="calculate-form__title calculate-form__title--calc">
+                            Расчет готов. Ваша скидка 5%.
+                            <span>Отправьте заявку и&nbsp;стоимость отобразиться</span>
+                        </div>
+                    </div>
+                    <div class="calculate-form__subitem calculate-form__subitem--cost">
+                        <div class="calculate-form__title calculate-form__title--cost">
+                            Ориентировочная стоимость:
+                        </div>
+                        <div class="calculate-form__value">
+                            <span>–</span>&nbsp;₽
+                        </div>
+                    </div>
+                </div>
+                <div class="calculate-form__item calculate-form__item--form">
+                    <div class="calculate-form__subtitle calculate-form__subtitle--form">
+                        Зафиксируйте стоимость вашего дизайна
+                    </div>
+                    <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
+                        <ul></ul>
+                    </div>
+                    <form action="/#wpcf7-f49-o5" aria-label="Contact form" class="wpcf7-form init" data-status="init"
+                          method="post" novalidate="novalidate">
+                        <div style="display: none;">
+                            <input name="_wpcf7" type="hidden" value="49">
+                            <input name="_wpcf7_version" type="hidden" value="5.7.7">
+                            <input name="_wpcf7_locale" type="hidden" value="en_US">
+                            <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f49-o5">
+                            <input name="_wpcf7_container_post" type="hidden" value="0">
+                            <input name="_wpcf7_posted_data_hash" type="hidden" value="">
+                        </div>
+                        <div class="hidden">
+                            Не заполнять
+                            <input class="wpcf7-form-control wpcf7-hidden" id="calculate-form-tariff" name="tariff"
+                                   type="hidden" value="">
+                            <input class="wpcf7-form-control wpcf7-hidden" id="calculate-form-area" name="area"
+                                   type="hidden" value="">
+                            <input class="wpcf7-form-control wpcf7-hidden" id="calculate-form-cost" name="cost"
+                                   type="hidden" value="">
+                        </div>
+                        <div class="calculate-form__item calculate-form__item--body">
+                            <div class="form__item">
+                                <label>
+                                    <span class="visually-hidden">Ваше имя</span> <span
+                                        class="wpcf7-form-control-wrap" data-name="name-cf7"><input aria-invalid="false"
+                                                                                                    aria-required="true"
+                                                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input"
+                                                                                                    name="name-cf7"
+                                                                                                    placeholder="Имя"
+                                                                                                    size="40"
+                                                                                                    type="text"
+                                                                                                    value=""></span>
+                                </label>
+                            </div>
+                            <div class="form__item">
+                                <label>
+                                    <span class="visually-hidden">Ваш телефон</span> <span
+                                        class="wpcf7-form-control-wrap" data-name="tel-cf7"><input aria-invalid="false"
+                                                                                                   aria-required="true"
+                                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation"
+                                                                                                   name="tel-cf7"
+                                                                                                   placeholder="+7 (000) 000 0000"
+                                                                                                   size="40"
+                                                                                                   type="tel"
+                                                                                                   value=""></span>
+                                </label>
+                            </div>
+                            <div class="form__item wpcf7__rules">
+                                Оставляя заявку, вы принимаете условия обработки персональных данных
+                            </div>
+                            <div class="form__item form__item--submit"><input
+                                    class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                    value="Жду звонок"><span class="wpcf7-spinner"></span></div>
+                        </div>
+                        <div aria-hidden="true" class="wpcf7-response-output"></div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide project" id="modal-project">
+    <div class="modal__overlay" tabindex="-1">
+        <div aria-modal="true" class="modal__container modal__container--project" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <main class="modal__content modal__content--project project__content" id="modal-4-content">
+                <div class="swiper project__slider">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <div class="project__nav-button project__button--next swiper-button-next"></div>
+                    <div class="project__nav-button project__button--prev swiper-button-prev"></div>
+                    <div class="project__pagination swiper-pagination"></div>
+                </div>
+                <div class="project__info">
+                    <ul class="project__parameter">
+                        <li>
+                            <div class="project__definition">
+                                Площадь:
+                            </div>
+                            <div class="project__area">
+                                <span></span>&nbsp;м&sup2;
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project__definition">
+                                Сроки разработки:
+                            </div>
+                            <div class="project__date">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="project__definition">
+                                Стоимость проекта:
+                            </div>
+                            <div class="project__cost">
+                                <span></span>&nbsp;₽
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="project__data">
+                    </div>
+                    <button class="button project__button modal-calculate-form">
+                        Рассчитайте стоимость
+                    </button>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide form-download" id="download-project">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header form-download__header">
+                <h2 class="modal__title form-download__title" id="modal-5-title">
+                    Скачайте реальный пример проекта
+                    для ознакомления
+                </h2>
+                <div class="form-download__desc">
+                    Заполните форму, чтобы получить доступ
+                    к&nbsp;файлу с&nbsp;реальным примером
+                </div>
+            </header>
+            <main class="modal__content" id="modal-5-content">
+                <div class="download-catalog__form">
+                    <div class="wpcf7 js">
+                        <form action="#" class="wpcf7-form init" method="post">
+                            <div class="wpcf7__download">
+                                <div class="wpcf7__soc">
+                                    <div class="wpcf7__soc-select-messenger">
+                                        <div class="wpcf7__soc-title">
+                                            <p>Куда отправить каталог?
+                                            </p>
+                                        </div>
+                                        <div class="wpcf7__soc-messenger">
+                                            <p><span class="wpcf7-form-control-wrap" data-name="select-messager"><span
+                                                    class="wpcf7-form-control wpcf7-radio"><span
+                                                    class="wpcf7-list-item first"><label><input name="select-messager"
+                                                                                                type="radio"
+                                                                                                value="Telegram"><span
+                                                    class="wpcf7-list-item-label">Telegram</span></label></span><span
+                                                    class="wpcf7-list-item last"><label><input checked="checked"
+                                                                                               name="select-messager"
+                                                                                               type="radio"
+                                                                                               value="WhatsApp"><span
+                                                    class="wpcf7-list-item-label">WhatsApp</span></label></span></span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p><label><br>
+                                        <span class="visually-hidden">Ваш телефон</span> <span
+                                                class="wpcf7-form-control-wrap" data-name="tel-cf7"><input
+                                                aria-invalid="false"
+                                                aria-required="true"
+                                                class="wpcf7-form-control phone-validation wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input"
+                                                name="tel-cf7"
+                                                placeholder="+7 (000) 000 0000"
+                                                size="40"
+                                                type="tel"
+                                                value=""></span><br>
+                                    </label>
+                                    </p>
+                                    <div class="wpcf7__rules">
+                                        <p>Оставляя заявку, вы принимаете условия обработки персональных данных
+                                        </p>
+                                    </div>
+                                    <p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                              value="Скачать"><span class="wpcf7-spinner"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal micromodal-slide form-download" id="get-offer">
+    <div class="modal__overlay" data-micromodal-close tabindex="-1">
+        <div aria-labelledby="modal-6-title" aria-modal="true" class="modal__container  modal__container--gift-offer"
+             role="dialog">
+            <button aria-label="Закрыть" class="modal__close" data-micromodal-close></button>
+            <header class="modal__header form-download__header">
+                <h2 class="modal__title form-download__title" id="modal-6-title">
+                    Нет времени ждать разработку дизайн-проекта?
+                </h2>
+                <div class="form-download__desc">
+                    Дизайнеры FlatWell создали 5&nbsp;дизайн-проектов в&nbsp;разных стилях и&nbsp;рассчитали все
+                    варианты работ и&nbsp;смету
+                </div>
+                <ul class="form-download__style">
+                    <li>
+                        лофт
+                    </li>
+                    <li>
+                        сканди
+                    </li>
+                    <li>
+                        классика
+                    </li>
+                    <li>
+                        этно
+                    </li>
+                    <li>
+                        урбан
+                    </li>
+                </ul>
+            </header>
+            <main class="modal__content" id="modal-6-content">
+                <div class="download-catalog__form">
+                    <div class="wpcf7 js">
+                        <form action="#" class="wpcf7-form init" method="post">
+                            <div class="wpcf7__download">
+                                <div class="wpcf7__soc">
+                                    <div class="wpcf7__soc-select-messenger">
+                                        <div class="wpcf7__soc-title">
+                                            <p>Куда отправить каталог?
+                                            </p>
+                                        </div>
+                                        <div class="wpcf7__soc-messenger">
+                                            <p><span class="wpcf7-form-control-wrap" data-name="select-messager"><span
+                                                    class="wpcf7-form-control wpcf7-radio"><span
+                                                    class="wpcf7-list-item first"><label><input name="select-messager"
+                                                                                                type="radio"
+                                                                                                value="Telegram"><span
+                                                    class="wpcf7-list-item-label">Telegram</span></label></span><span
+                                                    class="wpcf7-list-item last"><label><input checked="checked"
+                                                                                               name="select-messager"
+                                                                                               type="radio"
+                                                                                               value="WhatsApp"><span
+                                                    class="wpcf7-list-item-label">WhatsApp</span></label></span></span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p><label><br>
+                                        <span class="visually-hidden">Ваш телефон</span> <span
+                                                class="wpcf7-form-control-wrap" data-name="tel-cf7"><input
+                                                aria-invalid="false"
+                                                aria-required="true"
+                                                class="wpcf7-form-control phone-validation wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input"
+                                                name="tel-cf7"
+                                                placeholder="+7 (000) 000 0000"
+                                                size="40"
+                                                type="tel"
+                                                value=""></span><br>
+                                    </label>
+                                    </p>
+                                    <div class="wpcf7__rules">
+                                        <p>Оставляя заявку, вы принимаете условия обработки персональных данных
+                                        </p>
+                                    </div>
+                                    <p><input class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                              value="Скачать"><span class="wpcf7-spinner"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="form-download__gift">
+                    <svg fill="none" height="57" viewBox="0 0 57 57" width="57" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.7527 38.657C53.2301 38.3791 52.6556 38.2126 52.0655 38.168C51.4753 38.1234 50.8824 38.2017 50.324 38.3979V21.8852H50.8595C52.1636 21.8852 53.2258 20.8229 53.2258 19.5188V15.5634C53.2258 14.2593 52.1636 13.197 50.8595 13.197H42.3008C44.2526 11.5561 45.2545 10.1484 45.3063 8.92201C45.384 7.25519 43.6222 5.35519 43.0781 4.81974C42.534 4.27565 40.6599 2.5311 38.9758 2.59155C38.2763 2.6261 36.169 2.72974 31.8595 9.55246C31.7472 9.54383 31.6436 9.51792 31.5226 9.51792C31.4104 9.51792 31.2981 9.54383 31.1858 9.55246C26.8936 2.73837 24.7863 2.6261 24.0867 2.59155C22.4113 2.49655 20.5199 4.27565 19.9845 4.81974C19.4404 5.36383 17.6872 7.25519 17.7563 8.92201C17.8081 10.1397 18.8186 11.5561 20.7617 13.197H12.2117C10.9076 13.197 9.84538 14.2593 9.84538 15.5634V19.5188C9.84538 20.8229 10.9076 21.8852 12.2117 21.8852H12.7472V32.9052C11.5122 33.2334 10.2081 33.7602 8.84356 34.5202V33.0606C8.84356 32.5796 8.65248 32.1183 8.31236 31.7782C7.97223 31.4381 7.51093 31.247 7.02992 31.247H2.78947C2.30846 31.247 1.84715 31.4381 1.50703 31.7782C1.16691 32.1183 0.97583 32.5796 0.97583 33.0606V51.2316C0.97583 52.2334 1.78765 53.0452 2.78947 53.0452H7.03856C7.51956 53.0452 7.98087 52.8541 8.32099 52.514C8.66111 52.1739 8.85219 51.7126 8.85219 51.2316V50.3506C10.234 50.3334 13.7404 50.532 18.784 52.5097C22.014 53.7706 25.3736 54.4097 28.7158 54.4097C30.5726 54.4097 32.4295 54.2111 34.2517 53.8138C39.2781 52.7256 46.7745 50.4888 53.9945 46.0756C54.4734 45.7772 54.8886 45.3871 55.2161 44.9276C55.5437 44.4681 55.7771 43.9484 55.9031 43.3984C56.3522 41.5243 55.4713 39.5811 53.7527 38.657ZM48.8126 38.9334L38.8204 42.5175C39.0463 41.828 39.0919 41.0922 38.9528 40.3801C38.8137 39.6681 38.4946 39.0035 38.0258 38.4497C37.4867 37.8154 36.7713 37.3555 35.9704 37.1284V21.8852H48.8126V38.9334ZM31.5399 11.0293C32.8872 11.0293 34.0272 11.9534 34.364 13.197H28.7158C29.044 11.9534 30.184 11.0293 31.5399 11.0293ZM28.6122 14.7084H34.459V20.3738H28.6122V14.7084ZM28.6122 21.8852H34.459V36.9556H28.6122V21.8852ZM51.7145 15.5634V19.5188C51.7145 19.9938 51.3345 20.3738 50.8595 20.3738H35.9704V14.7084H50.8595C51.3345 14.7084 51.7145 15.0884 51.7145 15.5634ZM39.0536 4.10292C39.7272 4.07701 40.9449 4.80246 42.0245 5.89065C43.104 6.97019 43.8381 8.18792 43.8036 8.86155C43.7863 9.32792 43.3458 10.6666 39.8654 13.2056H35.884C35.7622 12.5051 35.4733 11.8441 35.0418 11.2789C34.6104 10.7136 34.049 10.2607 33.4054 9.95837C35.7458 6.32246 37.8272 4.15474 39.0536 4.10292ZM19.2676 8.85292C19.2417 8.18792 19.9672 6.96155 21.0554 5.88201C22.1349 4.80246 23.344 4.07701 24.0263 4.10292C25.244 4.15474 27.334 6.32246 29.6745 9.94974C28.3876 10.5543 27.4463 11.7547 27.1958 13.197H23.2145C19.7254 10.6579 19.2936 9.31928 19.2676 8.85292ZM11.3567 19.5188V15.5634C11.3567 15.0884 11.7367 14.7084 12.2117 14.7084H27.1008V20.3738H12.2117C11.7454 20.3738 11.3567 19.9938 11.3567 19.5188ZM14.2672 21.8852H27.1095V36.7743C26.1372 36.5511 25.2279 36.1112 24.4495 35.4875C22.4372 33.8811 18.8963 31.912 14.2758 32.5943V21.8852H14.2672ZM7.34083 51.2229C7.34083 51.387 7.20265 51.5252 7.03856 51.5252H2.78947C2.62538 51.5252 2.48719 51.387 2.48719 51.2229V33.0606C2.48719 32.8966 2.62538 32.7584 2.78947 32.7584H7.03856C7.20265 32.7584 7.34083 32.8966 7.34083 33.0606V51.2229ZM54.4436 43.0529C54.2708 43.7784 53.8304 44.4088 53.2172 44.7888C46.1786 49.0984 38.8463 51.2747 33.9408 52.3456C29.1304 53.3906 24.0781 52.9588 19.3454 51.1106C14.2931 49.1329 10.709 48.8479 9.04219 48.8479H8.86083V36.2388C15.7613 31.9552 20.9863 34.6497 23.5081 36.662C24.6755 37.5979 26.0758 38.198 27.5586 38.3979C27.6536 38.4411 27.7572 38.467 27.8695 38.467C27.9126 38.467 27.9472 38.4497 27.9904 38.4411C28.1717 38.4584 28.3531 38.467 28.5345 38.467H34.8217C35.6163 38.467 36.3763 38.8125 36.8945 39.4256C37.4213 40.0388 37.6372 40.8334 37.499 41.6452C37.3781 42.4052 36.8945 43.0529 36.2295 43.4588C36.1863 43.4761 36.1431 43.502 36.0999 43.5366C35.6681 43.7697 35.1672 43.8993 34.6404 43.8993H26.6604C26.2458 43.8993 25.9004 44.2361 25.9004 44.6593C25.9004 45.0825 26.2372 45.4193 26.6604 45.4193H34.6404C35.4349 45.4193 36.1949 45.212 36.8513 44.8493L50.8249 39.8402C51.559 39.5811 52.3708 39.6416 53.079 40.0216C54.1586 40.5916 54.7286 41.8438 54.4436 43.0529Z"
+                              fill="#D3D3D3"/>
+                    </svg>
+                    <div class="form-download__gift-text">
+                        При заказе ремонта
+                        авторский надзор
+                        в&nbsp;подарок
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>
