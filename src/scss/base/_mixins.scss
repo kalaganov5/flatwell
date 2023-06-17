@@ -134,3 +134,34 @@
   overflow: hidden;
   white-space: nowrap; /* Предотвращает перенос текста */
 }
+
+@mixin effect-left-mark {
+  padding-left: 14px;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-accent);
+  }
+
+  @include media-tablet {
+    padding-left: 30px;
+
+    &:after {
+      width: 10px;
+    }
+  }
+
+  @include media-desktop {
+    &:after {
+      width: 15px;
+    }
+  }
+}
