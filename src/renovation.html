@@ -233,7 +233,8 @@
                         <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
                             <ul></ul>
                         </div>
-                        <form action="/#wpcf7-f65-o1" aria-label="Contact form" class="wpcf7-form init" data-status="init"
+                        <form action="/#wpcf7-f65-o1" aria-label="Contact form" class="wpcf7-form init"
+                              data-status="init"
                               enctype="multipart/form-data" method="post" novalidate="novalidate">
                             <div style="display: none;">
                                 <input name="_wpcf7" type="hidden" value="65">
@@ -251,20 +252,22 @@
                                 ремонтных работ.
                             </div>
                             <label>
-                                <span class="wpcf7-form-control-wrap" data-name="user-file"><input accept="audio/*,video/*,image/*"
-                                                                                                   aria-invalid="false"
-                                                                                                   aria-required="true"
-                                                                                                   class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form__input"
-                                                                                                   name="user-file"
-                                                                                                   size="40"
-                                                                                                   type="file"></span>
+                                <span class="wpcf7-form-control-wrap" data-name="user-file"><input
+                                        accept="audio/*,video/*,image/*"
+                                        aria-invalid="false"
+                                        aria-required="true"
+                                        class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required form__input"
+                                        name="user-file"
+                                        size="40"
+                                        type="file"></span>
                             </label>
                             <label>
                                 <span class="visually-hidden">Ваш телефон</span> <span class="wpcf7-form-control-wrap"
                                                                                        data-name="tel-cf7"><input
                                     aria-invalid="false"
                                     aria-required="true"
-                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation" name="tel-cf7" placeholder="+7 (000) 000 0000" size="40"
+                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation"
+                                    name="tel-cf7" placeholder="+7 (000) 000 0000" size="40"
                                     type="tel" value=""></span>
                             </label>
                             <div class="wpcf7__rules">
@@ -392,13 +395,184 @@
         </div>
     </section>
     <section class="renovation_calc">
-        <div class="container">
+        <div class="renovation_calc__container">
             <h2 class="renovation-calc__headline">
                 Рассчитайте примерную стоимость
                 ремонта квартиры в&nbsp;Казани
             </h2>
             <div class="renovation-calc__form">
+                <ul class="renovation-calc__variable fw-form fw-form--list">
+                    <li class="renovation-calc__item renovation-calc__item--square">
+                        <label class="fw-form__label renovation-calc__square" for="fw-square">
+                            Площадь м²:
+                        </label>
+                        <div class="fw-form__input">
+                            <input class="fw-form__input-data renovation-calc__square-input" id="fw-square" min="1"
+                                   name="fw-square" placeholder="0" type="number">
+                        </div>
+                    </li>
+                    <li class="renovation-calc__item renovation-calc__item--house">
+                        <div class="fw-form__label">
+                            Тип дома:
+                        </div>
+                        <div class="fw-form__input">
+                            <div class="fw-form__input-radio">
+                                <input checked id="fw-house-type--new" name="fw-house-type" type="radio"
+                                       value="Новостройка">
+                                <label for="fw-house-type--new">Новостройка</label>
+                            </div>
 
+                            <div class="form_radio">
+                                <input id="fw-house-type--secondary" name="fw-house-type" type="radio"
+                                       value="Вторичка">
+                                <label for="fw-house-type--secondary">Вторичка</label>
+                            </div>
+
+                            <div class="form_radio">
+                                <input id="fw-house-type--townhouse" name="fw-house-type" type="radio"
+                                       value="Таунхаус">
+                                <label for="fw-house-type--townhouse">Таунхаус</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="renovation-calc__item renovation-calc__item--renovation">
+                        <div class="fw-form__label">
+                            Тип ремонта:
+                        </div>
+                        <div class="fw-form__input">
+                            <div class="fw-form__input-radio">
+                                <input checked data-price="124" id="fw-renovation-type--cosmetic"
+                                       name="fw-renovation-type" type="radio" value="Косметический">
+                                <label for="fw-renovation-type--cosmetic">Косметический</label>
+                            </div>
+
+                            <div class="form_radio">
+                                <input data-price="442" id="fw-renovation-type--invest" name="fw-renovation-type"
+                                       type="radio" value="Под инвестиции">
+                                <label for="fw-renovation-type--invest">Под инвестиции</label>
+                            </div>
+
+                            <div class="form_radio">
+                                <input data-price="3000" id="fw-renovation-type--styled" name="fw-renovation-type"
+                                       type="radio" value="По готовым стилям">
+                                <label for="fw-renovation-type--styled">По готовым стилям</label>
+                            </div>
+
+                            <div class="form_radio">
+                                <input data-price="1000" id="fw-renovation-type--design-project"
+                                       name="fw-renovation-type" type="radio" value="По дизайн-проекту">
+                                <label for="fw-renovation-type--design-project">По дизайн-проекту</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="renovation-calc__result">
+                    Примерная стоимость <span>–</span>&nbsp;₽
+                </div>
+                <div class="renovation-calc__fw-form-container">
+                    <div class="wpcf7 js" dir="ltr" id="wpcf7-f69-p70-o1" lang="en-US">
+                        <div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p>
+                            <ul></ul>
+                        </div>
+                        <form action="/70-2/#wpcf7-f69-p70-o1" aria-label="Contact form" class="wpcf7-form init"
+                              data-status="init" method="post" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input name="_wpcf7" type="hidden" value="69">
+                                <input name="_wpcf7_version" type="hidden" value="5.7.7">
+                                <input name="_wpcf7_locale" type="hidden" value="en_US">
+                                <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f69-p70-o1">
+                                <input name="_wpcf7_container_post" type="hidden" value="70">
+                                <input name="_wpcf7_posted_data_hash" type="hidden" value="">
+                            </div>
+                            <div class="hidden">
+                                Не заполнять
+                                <input class="wpcf7-form-control wpcf7-hidden" id="fw-square-val" name="fw-square-val" type="hidden"
+                                       value="">
+                                <input class="wpcf7-form-control wpcf7-hidden" id="fw-house-type-val" name="fw-house-type-val"
+                                       type="hidden" value="">
+                                <input class="wpcf7-form-control wpcf7-hidden" id="fw-renovation-type-val" name="fw-renovation-type-val"
+                                       type="hidden" value="">
+                            </div>
+                            <div class="renovation-calc__fw-form">
+
+                                <div class="renovation-calc__fw-form__item">
+                                    <label>
+                                        <span class="visually-hidden">Ваш телефон</span> <span
+                                            class="wpcf7-form-control-wrap" data-name="tel-cf7"><input aria-invalid="false"
+                                                                                                       aria-required="true"
+                                                                                                       class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation"
+                                                                                                       name="tel-cf7"
+                                                                                                       placeholder="+7 (000) 000 0000"
+                                                                                                       size="40"
+                                                                                                       type="tel"
+                                                                                                       value=""></span>
+                                    </label>
+                                </div>
+
+                                <div class="renovation-calc__fw-form__item"><input
+                                        class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"
+                                        value="Жду звонок"><span class="wpcf7-spinner"></span></div>
+
+                                <div class="renovation-calc__fw-form__item wpcf7__rules">
+                                    Оставляя заявку, вы принимаете условия обработки персональных данных
+                                </div>
+
+                            </div>
+                            <div aria-hidden="true" class="wpcf7-response-output"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--                <div class="wpcf7 js" id="wpcf7-f69-p70-o1" lang="en-US" dir="ltr">-->
+                <!--                    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>-->
+                <!--                        <ul></ul>-->
+                <!--                    </div>-->
+                <!--                    <form action="/70-2/#wpcf7-f69-p70-o1" method="post" class="wpcf7-form init"-->
+                <!--                          aria-label="Contact form" novalidate="novalidate" data-status="init">-->
+                <!--                        <div style="display: none;">-->
+                <!--                            <input type="hidden" name="_wpcf7" value="69">-->
+                <!--                            <input type="hidden" name="_wpcf7_version" value="5.7.7">-->
+                <!--                            <input type="hidden" name="_wpcf7_locale" value="en_US">-->
+                <!--                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f69-p70-o1">-->
+                <!--                            <input type="hidden" name="_wpcf7_container_post" value="70">-->
+                <!--                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">-->
+                <!--                        </div>-->
+                <!--                        <div class="renovation_calc__form&#45;&#45;body">-->
+                <!--                            <div class="form__item">-->
+                <!--                                <label>-->
+                <!--                                    <span class="visually-hidden">Ваше имя</span> <span class="wpcf7-form-control-wrap"-->
+                <!--                                                                                        data-name="name-cf7"><input-->
+                <!--                                        size="40"-->
+                <!--                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form__input"-->
+                <!--                                        aria-required="true" aria-invalid="false" placeholder="Имя" value="" type="text"-->
+                <!--                                        name="name-cf7"></span>-->
+                <!--                                </label>-->
+                <!--                            </div>-->
+                <!--                            <div class="form__item">-->
+                <!--                                <label>-->
+                <!--                                    <span class="visually-hidden">Ваш телефон</span> <span-->
+                <!--                                        class="wpcf7-form-control-wrap" data-name="tel-cf7"><input size="40"-->
+                <!--                                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form__input phone-validation"-->
+                <!--                                                                                                   aria-required="true"-->
+                <!--                                                                                                   aria-invalid="false"-->
+                <!--                                                                                                   placeholder="+7 (000) 000 0000"-->
+                <!--                                                                                                   value="" type="tel"-->
+                <!--                                                                                                   name="tel-cf7"></span>-->
+                <!--                                </label>-->
+                <!--                            </div>-->
+
+                <!--                            <div class="form__item form__item&#45;&#45;submit"><input-->
+                <!--                                    class="wpcf7-form-control has-spinner wpcf7-submit button" type="submit"-->
+                <!--                                    value="Оставить заявку"><span class="wpcf7-spinner"></span></div>-->
+
+                <!--                            <div class="form__item wpcf7__rules">-->
+                <!--                                Оставляя заявку, вы принимаете условия обработки персональных данных-->
+                <!--                            </div>-->
+
+                <!--                        </div>-->
+                <!--                        <div class="wpcf7-response-output" aria-hidden="true"></div>-->
+                <!--                    </form>-->
+                <!--                </div>-->
             </div>
         </div>
     </section>
@@ -407,68 +581,62 @@
             <h2 class="examples-work__headline">
                 примеры <span>наших ремонтов и&nbsp;отзывы</span>
             </h2>
-            <div class="swiper examples-work__slider">
-                <div class="examples-work__wrap swiper-wrapper">
-                    <div class="examples-work__slide swiper-slide">
-                        <div class="examples-work__image">
-                            <figure>
-                                <img alt="" height="455" src="images/content/cosmetic-ready-style.jpg" width="633">
-                                <figcaption>ЖК&nbsp;&laquo;Уникум&raquo;</figcaption>
-                            </figure>
+            <div class="examples-work__item">
+                <div class="swiper examples-work__slider">
+                    <div class="examples-work__wrap swiper-wrapper">
+                        <div class="examples-work__slide swiper-slide">
+                            <div class="examples-work__image">
+                                <figure>
+                                    <img alt="" height="455" src="images/content/cosmetic-ready-style.jpg" width="633">
+                                    <figcaption>ЖК&nbsp;&laquo;Уникум&raquo;</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="examples-work__slide swiper-slide">
+                            <div class="examples-work__image">
+                                <figure>
+                                    <img alt="" height="455" src="images/content/cosmetic-renovation-1.jpg" width="633">
+                                    <figcaption>ЖК&nbsp;&laquo;Свобода&raquo;</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <div class="examples-work__slide swiper-slide">
-                        <div class="examples-work__image">
-                            <figure>
-                                <img alt="" height="455" src="images/content/cosmetic-renovation-1.jpg" width="633">
-                                <figcaption>ЖК&nbsp;&laquo;Свобода&raquo;</figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    <div class="examples-work__nav examples-work__nav--next swiper-button-next"></div>
+                    <div class="examples-work__nav examples-work__nav--prev swiper-button-prev"></div>
                 </div>
-                <div class="examples-work__nav examples-work__nav--next swiper-button-next"></div>
-                <div class="examples-work__nav examples-work__nav--prev swiper-button-prev"></div>
+                <a class="example-work__link button" href="#">
+                    Смотреть обзор
+                </a>
             </div>
-            <a class="example-work__link button" href="#">
-                Смотреть обзор
-            </a>
-            <div class="swiper examples-work__slider examples-work__slider--second">
-                <div class="examples-work__wrap swiper-wrapper">
-                    <div class="examples-work__slide swiper-slide">
-                        <div class="examples-work__image">
-                            <figure>
-                                <img alt="" height="455" src="images/content/cosmetic-ready-style.jpg" width="633">
-                                <figcaption>ЖК&nbsp;&laquo;Уникум&raquo;</figcaption>
-                            </figure>
+            <div class="examples-work__item">
+                <div class="swiper examples-work__slider">
+                    <div class="examples-work__wrap swiper-wrapper">
+                        <div class="examples-work__slide swiper-slide">
+                            <div class="examples-work__image">
+                                <figure>
+                                    <img alt="" height="455" src="images/content/cosmetic-ready-style.jpg" width="633">
+                                    <figcaption>ЖК&nbsp;&laquo;Уникум&raquo;</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="examples-work__slide swiper-slide">
+                            <div class="examples-work__image">
+                                <figure>
+                                    <img alt="" height="455" src="images/content/cosmetic-renovation-1.jpg" width="633">
+                                    <figcaption>ЖК&nbsp;&laquo;Свобода&raquo;</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <div class="examples-work__slide swiper-slide">
-                        <div class="examples-work__image">
-                            <figure>
-                                <img alt="" height="455" src="images/content/cosmetic-renovation-1.jpg" width="633">
-                                <figcaption>ЖК&nbsp;&laquo;Свобода&raquo;</figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    <div class="examples-work__nav examples-work__nav--next swiper-button-next"></div>
+                    <div class="examples-work__nav examples-work__nav--prev swiper-button-prev"></div>
                 </div>
-                <div class="examples-work__nav examples-work__nav--next swiper-button-next"></div>
-                <div class="examples-work__nav examples-work__nav--prev swiper-button-prev"></div>
+                <a class="example-work__link example-work__link--second button" href="#">
+                    Смотреть обзор
+                </a>
             </div>
-            <a class="example-work__link example-work__link--second button" href="#">
-                Смотреть обзор
-            </a>
         </div>
     </section>
-
-    <section>
-        <div>
-            <h2>
-                Рассчитайте примерную стоимость
-                ремонта квартиры в&nbsp;Казани
-            </h2>
-        </div>
-    </section>
-
     <section class="extras">
         <div class="container">
             <h2 class="extras__headline headline">

@@ -8,6 +8,7 @@ import loadPixelperfect from 'pixelperfect-tool';
 import '../scss/app.scss';
 import { animation } from './animation/animation';
 import FormCalculate from './form/calculate-range';
+import CalculateRanovationForm from './form/calculate-ranovation-form';
 import CalculateModal from './modal/calculate-modal';
 import DownloadModal from './modal/download-modal';
 import FreeConsultModal from './modal/free-consult-modal';
@@ -62,3 +63,5 @@ new DownloadModal().init();
 new OfferModal().init();
 
 new SliderWork();
+
+new CalculateRanovationForm().init();

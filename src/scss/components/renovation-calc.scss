@@ -1,0 +1,161 @@
+.renovation_calc {
+  @include media-tablet {
+    padding-left: var(--container-gap);
+    padding-right: var(--container-gap);
+    max-width: var(--width-desktop);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.renovation_calc__container {
+  background-color: var(--color-gray);
+  max-width: var(--width-desktop);
+  padding: 30px var(--container-gap);
+  border-radius: 20px;
+
+  @include media-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-desktop {
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+
+.renovation-calc__headline {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include media-tablet {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  @include media-desktop {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.renovation-calc__variable {
+  display: grid;
+  row-gap: 30px;
+  margin-bottom: 30px;
+
+  li {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  .renovation-calc__square-input[type="number"] {
+    max-width: 150px;
+  }
+
+  @include media-tablet {
+    li {
+      grid-template-columns: 150px 1fr;
+      column-gap: 20px;
+
+      .fw-form__label {
+        grid-column: 1/2;
+      }
+
+      .fw-form__input {
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  @include media-desktop {
+    row-gap: 45px;
+    margin-bottom: 45px;
+  }
+}
+
+.renovation-calc__item {
+  @include media-tablet {
+    &--square {
+      align-items: center;
+    }
+
+    &--house {
+      .fw-form__input {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    &--renovation {
+      .fw-form__input {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        gap: 15px 20px;
+      }
+    }
+  }
+}
+
+.renovation-calc__result {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+  @include media-tablet {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 45px;
+  }
+}
+
+.renovation-calc__fw-form {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .wpcf7-tel {
+    margin-top: 0;
+  }
+
+  .wpcf7__rules {
+    text-align: center;
+  }
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+
+    .wpcf7__rules {
+      margin-top: 0;
+    }
+
+    input {
+      min-height: 50px;
+    }
+  }
+
+  @include media-desktop {
+    column-gap: 30px;
+  }
+}
+
+.renovation-calc__fw-form__item {
+  @include media-tablet {
+    .wpcf7-submit {
+      margin-top: 0;
+    }
+  }
+}
