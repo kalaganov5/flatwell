@@ -7,12 +7,14 @@
   max-width: var(--width-desktop);
   display: grid;
   grid-template-columns: minmax(var(--container-gap), auto) 1fr minmax(var(--container-gap), auto);
+  margin-left: auto;
+  margin-right: auto;
 
   @include media-desktop {
     grid-template-columns:
             minmax(var(--container-gap), auto)
-            calc(var(--width-desktop) / 2 - var(--container-gap) * 2)
-            calc(var(--width-desktop) / 2 - var(--container-gap) * 2)
+            calc(var(--width-desktop) / 2 - var(--container-gap))
+            calc(var(--width-desktop) / 2 - var(--container-gap))
             minmax(var(--container-gap), auto);
   }
 }
