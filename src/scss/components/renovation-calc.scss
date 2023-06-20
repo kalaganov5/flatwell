@@ -136,7 +136,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: center;
+    align-items: start;
 
     .wpcf7__rules {
       margin-top: 0;
