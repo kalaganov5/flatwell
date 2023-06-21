@@ -268,3 +268,15 @@
     grid-area: form;
   }
 }
+
+.evolution__accent {
+  text-transform: uppercase;
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @include media-tablet {
+    font-size: 20px;
+  }
+}
