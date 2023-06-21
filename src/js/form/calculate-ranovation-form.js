@@ -1,4 +1,5 @@
 export default class CalculateRanovationForm {
+  #form = null;
   #inputSquare = null;
   #priceField = null;
   #inputRenovationPerM2 = null;
@@ -10,27 +11,32 @@ export default class CalculateRanovationForm {
   #inputFormRenovationType = null;
 
   init() {
-    this.#inputSquare = document.querySelector('#fw-square');
-    this.#priceField = document.querySelector('.renovation-calc__result span');
-    this.#inputRenovationType = document.querySelector('input[name="fw-renovation-type"]:checked');
-    this.#inputHouseType = document.querySelector('input[name="fw-house-type"]:checked');
-    this.#inputRenovationPerM2 = this.#inputRenovationType.getAttribute('data-price');
+    this.#form = document.querySelector('.renovation-calc__form');
 
-    // input for form
-    this.#inputFormSquare = document.querySelector('input[name="fw-square-val"]');
-    this.#inputFormHouseType = document.querySelector('input[name="fw-house-type-val"]');
-    this.#inputFormRenovationType = document.querySelector('input[name="fw-renovation-type-val"]');
-    // input for form
+    // если это блок с формой
+    if (this.#form !== null) {
+      this.#inputSquare = this.#form.querySelector('#fw-square');
+      this.#priceField = this.#form.querySelector('.renovation-calc__result span');
+      this.#inputRenovationType = this.#form.querySelector('input[name="fw-renovation-type"]:checked');
+      this.#inputHouseType = this.#form.querySelector('input[name="fw-house-type"]:checked');
+      this.#inputRenovationPerM2 = this.#inputRenovationType.getAttribute('data-price');
 
-    this.#calculate();
+      // input for form
+      this.#inputFormSquare = this.#form.querySelector('input[name="fw-square-val"]');
+      this.#inputFormHouseType = this.#form.querySelector('input[name="fw-house-type-val"]');
+      this.#inputFormRenovationType = this.#form.querySelector('input[name="fw-renovation-type-val"]');
+      // input for form
 
-    this.#setRenovationHandler();
-    this.#setSquareHandler();
-    this.#setHouseTypeHandler();
+      this.#calculate();
+
+      this.#setRenovationHandler();
+      this.#setSquareHandler();
+      this.#setHouseTypeHandler();
+    }
   }
 
   #setRenovationHandler() {
-    const tariffRadios = document.querySelectorAll('input[name="fw-renovation-type"]');
+    const tariffRadios = this.#form.querySelectorAll('input[name="fw-renovation-type"]');
 
     // Функция для обработки изменения значения радио-переключателя
     const handleTariffChange = (evt) => {
@@ -45,7 +51,7 @@ export default class CalculateRanovationForm {
   }
 
   #setSquareHandler() {
-    const inputSquare = document.querySelector('input[name="fw-square"]');
+    const inputSquare = this.#form.querySelector('input[name="fw-square"]');
 
     // Функция для обработки изменения значения радио-переключателя
     const handleTariffChange = (evt) => {
@@ -57,7 +63,7 @@ export default class CalculateRanovationForm {
   }
 
   #setHouseTypeHandler() {
-    const houseRadios = document.querySelectorAll('input[name="fw-house-type"]');
+    const houseRadios = this.#form.querySelectorAll('input[name="fw-house-type"]');
 
     // Функция для обработки изменения значения радио-переключателя
     const handleTariffChange = (evt) => {
@@ -78,7 +84,7 @@ export default class CalculateRanovationForm {
   }
 
   #updateValueForm() {
-    this.#inputRenovationType = document.querySelector('input[name="fw-renovation-type"]:checked');
+    this.#inputRenovationType = this.#form.querySelector('input[name="fw-renovation-type"]:checked');
 
     this.#inputFormSquare.value = this.#inputSquare.value;
     this.#inputFormHouseType.value = this.#inputHouseType.value;

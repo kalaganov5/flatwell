@@ -165,3 +165,21 @@
     }
   }
 }
+
+//@mixin headline($h1-mobile, $h1-tablet, $pc) {
+//  h1.headline {
+//    font-size: 27px;
+//
+//    @include media-mobile-m {
+//      font-size: 32px;
+//    }
+//
+//    @include media-tablet {
+//      font-size: 40px;
+//    }
+//
+//    @include media-desktop {
+//      font-size: 45px;
+//    }
+//  }
+//}

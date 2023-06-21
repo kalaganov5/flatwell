@@ -10,6 +10,7 @@
   --color-accent-dark: #9B344E;
 
   --container-gap: 20px;
+  --block-gap: 40px;
   --width-desktop: 1400px;
 
   --swiper-pagination-bullet-width: 18px;
@@ -19,6 +20,10 @@
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bottom: 0;
   --swiper-navigation-color: var(--color-white);
+
+  @media (min-width: 768px) {
+    --block-gap: 65px;
+  }
 
   @media (min-width: 1400px) {
     --container-gap: 40px;
