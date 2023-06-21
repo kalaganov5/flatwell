@@ -45,6 +45,17 @@
   @include media-tablet {
     margin-bottom: 0;
     align-self: center;
+
+    li {
+      grid-template-columns: 50px 1fr;
+    }
+  }
+
+  @include media-desktop {
+
+    li {
+      grid-template-columns: 70px 1fr;
+    }
   }
 }
 
@@ -55,6 +66,14 @@
   -webkit-text-stroke: 2px var(--color-white);
 
   justify-self: center;
+
+  @include media-tablet {
+    font-size: 70px;
+  }
+
+  @include media-desktop {
+    font-size: 100px;
+  }
 }
 
 .audience__form {
