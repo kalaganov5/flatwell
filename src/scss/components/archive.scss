@@ -1,0 +1,135 @@
+.archive {
+  padding-top: var(--block-gap);
+  padding-bottom: var(--block-gap);
+}
+
+.archive__list {
+  @include reset-list;
+  display: grid;
+  gap: 20px;
+
+  @include media-tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+
+    li {
+      &:nth-child(3n) {
+        grid-column: 1/-1;
+
+        .archive__image {
+          @include adaptive-image(728, 200);
+        }
+      }
+    }
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(3, 1fr);
+
+    li {
+
+      .archive__image {
+        padding-bottom: 0;
+
+        img {
+          position: unset;
+          height: 250px;
+        }
+      }
+
+      &:nth-child(3n) {
+        grid-column: unset;
+
+        .archive__image {
+          padding-bottom: 0;
+
+          img {
+            position: unset;
+            outline: 1px solid red;
+            height: 250px !important;
+          }
+        }
+      }
+
+      &:nth-child(5n-1) {
+        grid-column: 1/3;
+
+        .archive__image {
+          img {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.archive__wrap {
+  background-color: var(--color-gray);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.archive__image {
+  display: block;
+  max-height: 250px;
+  @include adaptive-image(300, 200);
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.archive__body {
+  padding: 20px 10px;
+}
+
+.archive__headline {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration-color: var(--color-light-gray);
+  color: var(--color-white);
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+  }
+}
+
+.archive__desc {
+  margin-bottom: 20px;
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.archive__tags {
+  margin-bottom: 15px;
+}
+
+.archive__date {
+  text-align: right;
+}
+
+.archive__footer {
+  font-size: 14px;
+  @include media-tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

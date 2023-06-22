@@ -10,6 +10,7 @@
 }
 
 .tags-links__item {
+  & span,
   & a {
     text-decoration: none;
     font-weight: 600;
@@ -27,12 +28,6 @@
       content: '#';
       margin-right: 2px;
       font-size: 0.8em;
-      color: inherit;
-    }
-
-    &:hover,
-    &:active {
-      background-color: var(--color-accent);
       color: inherit;
     }
   }

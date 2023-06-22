@@ -1,7 +1,22 @@
 .header {
+  &--archive {
+    .header__accent {
+      &:before {
+        background-image: url("../images/design/bg-blog.jpg");
+      }
+    }
+  }
+
   @include media-tablet {
     position: relative;
+    &--archive {
+      .header__accent {
+        min-height: 500px;
+      }
+    }
   }
+
+
 }
 
 .header__main {
