@@ -101,18 +101,18 @@ export default class ProjectInfoModal {
   }
 
   getData(postId) {
-    const postContentPromise = fetch(this.#homeUrl + `wp/v2/cases/${postId}`)
-      .then(postContentResponse => {
-        if (!postContentResponse.ok) {
-          throw new Error('Ошибка при получении данных поста');
-        }
-        return postContentResponse.json();
-      })
-
-      .catch(error => {
-        // Обработка ошибки
-        throw error;
-      });
+    // const postContentPromise = fetch(this.#homeUrl + `wp/v2/cases/${postId}`)
+    //   .then(postContentResponse => {
+    //     if (!postContentResponse.ok) {
+    //       throw new Error('Ошибка при получении данных поста');
+    //     }
+    //     return postContentResponse.json();
+    //   })
+    //
+    //   .catch(error => {
+    //     // Обработка ошибки
+    //     throw error;
+    //   });
 
     const postMetaPromise = fetch(this.#homeUrl + `custom/v1/meta/${postId}`)
       .then(response => {
@@ -126,20 +126,21 @@ export default class ProjectInfoModal {
         throw error; // Переброс ошибки для обработки во внешнем коде
       });
 
-    return Promise.all([postContentPromise, postMetaPromise])
-      .then(([postContentData, postMetaData]) => {
+    return Promise.all([postMetaPromise])
+      .then(([postMetaData]) => {
 
         const {
           area,
           cost,
           duration,
-          gallery
+          gallery,
+          description
         } = postMetaData;
         this.#updateData({
           areaValue: area,
           priceValue: cost,
           durationValue: duration,
-          contentValue: postContentData.content.rendered,
+          contentValue: description,
           images: gallery,
         });
       });
