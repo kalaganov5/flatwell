@@ -153,6 +153,12 @@
       }
     }
   }
+
+  @include media-desktop {
+    &--shift {
+      margin-left: 90px;
+    }
+  }
 }
 
 .evolution__image-overlay {
@@ -259,18 +265,21 @@
   border-radius: 20px;
   background-color: var(--color-gray);
   padding: 30px var(--container-gap);
+  margin-top: 40px;
 
   .headline {
     font-size: 18px;
   }
 
   @include media-tablet {
+    margin-top: 0;
     grid-area: form;
   }
 }
 
 .evolution__accent {
   text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   span {
     color: var(--color-accent);
