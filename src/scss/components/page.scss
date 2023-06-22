@@ -1,0 +1,16 @@
+.page__container {
+  @include media-tablet {
+    & > * {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+  }
+}
+
+.page__footer {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
