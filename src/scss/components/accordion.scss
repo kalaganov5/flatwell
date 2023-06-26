@@ -88,6 +88,7 @@
 
 .accordion-title {
   padding-right: 40px;
+  display: block;
 
   @include media-tablet {
     font-size: 20px;

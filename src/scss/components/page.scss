@@ -1,4 +1,11 @@
 .page__container {
+  font-size: 18px;
+  line-height: 1.5;
+
+  img {
+    border-radius: 10px;
+  }
+
   @include media-tablet {
     & > * {
       max-width: 800px;
