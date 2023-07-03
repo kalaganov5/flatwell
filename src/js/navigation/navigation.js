@@ -1,5 +1,3 @@
-// import { CloseIsOutsideClick } from '../close-is-outside-click.js';
-
 export class Navigation {
   #menuContainerClass = 'navigation';
   #menuButtonClass = 'hamburger__button';
