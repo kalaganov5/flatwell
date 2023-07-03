@@ -1,7 +1,6 @@
 import 'normalize.css';
 
-import loadPixelperfect from 'pixelperfect-tool';
-
+// import loadPixelperfect from 'pixelperfect-tool';
 /* Your JS Code goes here */
 // DEV
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -17,14 +16,15 @@ import NoticeModal from './modal/notice-modal';
 import ProjectInfoModal from './modal/project-info-modal';
 import { Navigation } from './navigation/navigation';
 import { phoneValidation } from './phone-validation/phone-validation';
+import BeforeAfter from './slider/before-after';
 import SliderWork from './slider/slider-work';
 
-window.pixelperfect = {
-  breakpoints: [320, 768, 1400],
-  folder: 'http://ydpn.ru/flatwell/pp/',
-};
-
-loadPixelperfect();
+// window.pixelperfect = {
+//   breakpoints: [320, 768, 1400],
+//   folder: 'http://ydpn.ru/flatwell/pp/',
+// };
+//
+// loadPixelperfect();
 // DEV
 
 animation();
@@ -65,3 +65,9 @@ new OfferModal().init();
 new SliderWork();
 
 new CalculateRanovationForm().init();
+
+if (document.querySelector('#beforeafter') !== null) {
+  new BeforeAfter({
+    id: '#beforeafter',
+  });
+}
